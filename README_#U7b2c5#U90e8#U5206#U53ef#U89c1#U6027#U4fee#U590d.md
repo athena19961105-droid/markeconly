@@ -1,0 +1,1 @@
+第 5 部分现在直接写在 research-check.html 中，页面打开即可看见（不需要先上传 CSV）。上传 CSV 后，在第 4 部分选择题目和选项，再在第 5 部分比较情景。请将压缩包中 markeconly-main 文件夹内部全部文件上传 GitHub 仓库根目录，覆盖同名文件，等待 Vercel 部署后强制刷新。若仍看不到第 5 部分，请核实 Vercel Production Branch 和最新 Deployment。

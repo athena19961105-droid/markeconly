@@ -1,0 +1,36 @@
+MarkEconly V3 — 中文上传指南
+=================================
+更新目标：Services、Research Portfolio、Sample Report、Contact。
+沿用 V2 的主页多语言切换和两个免费计算器。
+注意：新增的四个页面目前以英文为主；原 articles.html 和 articles/ 原样保留。
+
+你将上传/替换这 7 个文件：
+index.html（替换）
+styles.css（替换）
+script.js（替换）
+services.html（新增）
+portfolio.html（新增）
+sample-report.html（新增）
+contact.html（新增）
+
+最简单的方法（GitHub 网页端）：
+1. 打开 https://github.com/athena19961105-droid/markeconly
+2. 先 Code -> Download ZIP 保存旧仓库备份。
+3. 回到仓库首页，点 Add file -> Upload files。
+4. 把解压后的上述 7 个文件一起拖进上传区域。文件应放在仓库根目录，不要创建额外的 MarkEconly_v3_upload 子文件夹。
+5. 确认文件名和路径：index.html、styles.css、script.js 等均位于根目录。
+6. 在提交说明写 Update MarkEconly services and research pages，然后 Commit changes。
+7. 进入 Vercel，找到确实连接 athena19961105-droid/markeconly 的项目。
+8. 打开 Deployments，确认最新部署使用 main 分支且状态 Ready / Production / Current。
+9. 用该项目 Domains 中的正式域名访问网站，并在 Mac Chrome 按 Command+Shift+R。
+10. 依次检查 /services.html、/portfolio.html、/sample-report.html、/contact.html、/articles.html 和首页两个计算器。
+
+若 GitHub 的 Upload files 无法覆盖同名文件：
+打开同名文件 -> 铅笔 Edit -> 粘贴新文件内容 -> Commit changes；
+新增的 4 个 html 文件仍可以用 Add file -> Upload files。
+
+本包不会删除或修改现有 articles.html 和 articles/ 文件夹。
+你看到的其他 Vercel 项目可能仍在部署旧版；不要为此删除项目。
+Sample Report 是明确标注的“示例结构”，不包含虚构研究结果。
+不要把本示例当作已完成的真实客户报告。
+联系邮箱已统一为 ALxy1105@outlook.com。

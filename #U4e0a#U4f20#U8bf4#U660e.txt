@@ -1,0 +1,8 @@
+MarkEconly 多语言更新 V2
+1. 先在 GitHub 仓库点击 Code → Download ZIP 备份原代码。
+2. 只替换根目录的 index.html、styles.css、script.js，保留 articles.html、articles/、README.md。
+3. 在 GitHub 打开每个文件 → 铅笔 Edit → 粘贴本包同名文件内容 → Commit changes。
+4. 打开 Vercel 的正确项目，Deployments 等待 Ready / Production / Current。
+5. 打开项目正式域名，按 Cmd+Shift+R 刷新，检查邮箱和语言下拉菜单。
+注意：这是试验版多语言首页。英语完整，其他8种语言为部分翻译，其余句子回退英文；articles.html 和文章页仍是原有内容。请不要宣传全站完全本地化。
+联系邮箱已改为 ALxy1105@outlook.com，请确认能收到邮件。没有自动收款或AI API功能。

@@ -1,0 +1,22 @@
+{
+  "dataset": "SYNTHETIC \u2014 NOT REAL RESPONDENTS",
+  "rows": 100,
+  "columns": 6,
+  "missing_by_column": {
+    "respondent_id": 0,
+    "age": 0,
+    "price_sensitivity_1to5": 0,
+    "brand_trust_1to5": 1,
+    "purchase_intent_1to5": 1,
+    "segment": 0
+  },
+  "invalid_scale_by_column": {
+    "price_sensitivity_1to5": 1,
+    "brand_trust_1to5": 1,
+    "purchase_intent_1to5": 0
+  },
+  "invalid_age": 1,
+  "exact_duplicate_rows": 1,
+  "duplicate_respondent_ids": 1,
+  "note": "Test fixture only. Review flagged cases; do not automatically delete."
+}

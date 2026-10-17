@@ -16,6 +16,21 @@ function translate(raw){const v=raw.trim();if(!v)return raw;let result=dictionar
  if(!result){let m=v.match(/^(.+) maximum$/);if(m)result=`${m[1]} 最大值`;}
  if(!result){let m=v.match(/^Revenue-based return: ([\d.]+)%\. Excludes product and operating costs\.$/);if(m)result=`基于收入的回报率：${m[1]}%。不包括产品成本和运营成本。`;}
  if(!result){let m=v.match(/^Estimated break-even: ([\d,]+) units\.$/);if(m)result=`预计盈亏平衡销量：${m[1]} 件。`;}
+ if(!result){const patterns=[
+ [/^Uploaded: (\d+); valid: (\d+); missing: (\d+); invalid: (\d+)$/,m=>`已上传：${m[1]}；有效：${m[2]}；缺失：${m[3]}；无效：${m[4]}`],
+ [/^Original mean: ([\d.]+); preview mean: ([\d.]+)$/,m=>`原始均值：${m[1]}；预览均值：${m[2]}`],
+ [/^Transformation: (.*)$/,m=>`转换方式：${m[1]==='no transformation'?'不进行转换':m[1]==='min + max − original'?'最小值 + 最大值 − 原值':m[1]}`],
+ [/^Invalid CSV rows: (.*)$/,m=>`无效 CSV 行号：${m[1]}`],
+ [/^Partially missing CSV rows: (.*)$/,m=>`部分缺失的 CSV 行号：${m[1]}`],
+ [/^Uploaded rows: (\d+); complete valid respondents: (\d+); total selections: (\d+); denominator: (\d+) \((.*?)\)\.$/,m=>`上传记录：${m[1]}；完整有效受访者：${m[2]}；总选择次数：${m[3]}；分母：${m[4]}（${m[5]==='complete'?'完整记录':m[5]==='all'?'全部记录':m[5]}）。`],
+ [/^Fully blank sets: (\d+); partially missing sets: (\d+); invalid rows: (\d+)\. CSV row numbers start at 2\.$/,m=>`完全空白：${m[1]}；部分缺失：${m[2]}；无效记录：${m[3]}。CSV 数据从第 2 行开始。`],
+ [/^Source: (.*) · (\d+) rows · (\d+) columns$/,m=>`来源：${m[1]} · ${m[2]} 行 · ${m[3]} 列`],
+ [/^Generated: (.*)$/,m=>`生成时间：${m[1]}`],
+ [/^(.+?) — Not assessed$/,m=>`${dictionary[m[1]]||m[1]} — 尚未评估`],
+ [/^(.+?) — Captured — requires review$/,m=>`${dictionary[m[1]]||m[1]} — 已收集 · 需要复核`],
+ [/^Positive responses \(score ≥ (\d+)\): (\d+)$/,m=>`正向回答（评分 ≥ ${m[1]}）：${m[2]}`],
+ [/^Calculated proportion: (.*)$/,m=>`计算比例：${m[1]}`],
+ ];for(const [re,fn] of patterns){const m=v.match(re);if(m){result=fn(m);break;}}}
  return result===undefined?raw:raw.replace(v,result);
 }
 function convertFallback(s){const article=window.MARKECONLY_ARTICLE_TW||{};const v=s.trim();return article[v]===undefined?s:s.replace(v,article[v]);}

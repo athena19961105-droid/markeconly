@@ -1,0 +1,385 @@
+﻿language,key,status,english_reference,current_value
+zh-CN,k1,translated-or-neutral,Services,服务
+zh-CN,k2,translated-or-neutral,Process,流程
+zh-CN,k3,translated-or-neutral,Insights,文章
+zh-CN,k4,translated-or-neutral,Tools,工具
+zh-CN,k5,translated-or-neutral,Contact,联系
+zh-CN,k6,translated-or-neutral,INDEPENDENT RESEARCH PILOT,独立研究试点
+zh-CN,k7,translated-or-neutral,Better market decisions start with clearer evidence.,更好的市场决策，从更清晰的证据开始。
+zh-CN,k8,translated-or-neutral,"Practical consumer and competitor research for independent brands and small businesses. Concise briefs based on public information, with transparent sources and limitations.",为独立品牌和小企业提供实用的消费者与竞争对手研究，基于公开信息制作简洁报告，并说明来源和局限。
+zh-CN,k9,translated-or-neutral,Explore our research brief,了解研究简报
+zh-CN,k10,translated-or-neutral,START SMALL,从小处开始
+zh-CN,k11,translated-or-neutral,One question. One useful brief.,一个问题，一份有用的简报。
+zh-CN,k12,translated-or-neutral,Starter Market Research Brief,基础市场研究简报
+zh-CN,k13,translated-or-neutral,A proposed 5–8 page English PDF answering one clearly scoped business question.,针对一个明确的商业问题，提供拟议中的5–8页英文PDF报告。
+zh-CN,k14,translated-or-neutral,Consumer needs and possible buying barriers,消费者需求及可能的购买障碍
+zh-CN,k15,translated-or-neutral,Comparison of 3–5 competitors using public information,基于公开信息比较3–5家竞争者
+zh-CN,k16,translated-or-neutral,"Linked evidence, limitations and three practical next steps",附来源证据、局限及三项实际建议
+zh-CN,k17,translated-or-neutral,"Desk research only. No invented survey findings, guaranteed sales results, or confidential competitor information.",仅提供案头研究；不虚构调查结果、不保证销售成果，也不使用竞争对手的保密信息。
+zh-CN,k18,translated-or-neutral,"Illustrative pilot price, not yet validated. Subject to agreed scope.",仅为试点价格示例，尚未经过市场验证；具体价格取决于双方确认的工作范围。
+zh-CN,k19,translated-or-neutral,HOW IT WORKS,工作流程
+zh-CN,k20,translated-or-neutral,"Clear process, honest evidence",清晰的流程，真实的证据
+zh-CN,k21,translated-or-neutral,01 · Define,01 · 明确问题
+zh-CN,k22,translated-or-neutral,Ask a specific question,提出一个具体问题
+zh-CN,k23,translated-or-neutral,"Identify the market, target customer and decision.",明确目标市场、目标客户和需要作出的决策。
+zh-CN,k24,translated-or-neutral,02 · Research,02 · 开展研究
+zh-CN,k25,translated-or-neutral,Review public sources,审阅公开资料
+zh-CN,k26,translated-or-neutral,Separate supported evidence from interpretation.,区分有依据的证据与研究者的解释。
+zh-CN,k27,translated-or-neutral,03 · Apply,03 · 应用成果
+zh-CN,k28,translated-or-neutral,Receive a focused brief,获取聚焦问题的研究简报
+zh-CN,k29,translated-or-neutral,"Review insights, limitations and possible next steps.",审阅研究发现、局限性与可行的下一步行动。
+zh-CN,k30,translated-or-neutral,FREE TOOLS,免费工具
+zh-CN,k31,translated-or-neutral,Simple business calculators,简单的商业计算器
+zh-CN,k32,translated-or-neutral,Campaign revenue return,广告活动收入回报
+zh-CN,k33,translated-or-neutral,"Revenue-based comparison, not profit ROI.",基于收入进行比较，并非利润投资回报率。
+zh-CN,k34,translated-or-neutral,Attributed revenue ($),归因收入（美元）
+zh-CN,k35,translated-or-neutral,Marketing spend ($),营销支出（美元）
+zh-CN,k36,translated-or-neutral,Calculate,计算
+zh-CN,k37,translated-or-neutral,Break-even units,盈亏平衡销量
+zh-CN,k38,translated-or-neutral,Assumes constant unit price and costs.,假设单位售价与成本保持不变。
+zh-CN,k39,translated-or-neutral,Fixed costs ($),固定成本（美元）
+zh-CN,k40,translated-or-neutral,Price per unit ($),单位售价（美元）
+zh-CN,k41,translated-or-neutral,Variable cost per unit ($),单位可变成本（美元）
+zh-CN,k42,translated-or-neutral,Calculate,计算
+zh-CN,k43,translated-or-neutral,ABOUT & CONTACT,关于与联系
+zh-CN,k44,translated-or-neutral,Research-minded. Practical by design.,以研究为基础，以实用为导向。
+zh-CN,k45,translated-or-neutral,MarkEconly is an early-stage independent project exploring how consumer behaviour and marketing research can help small businesses make clearer decisions.,MarkEconly 是一个处于早期阶段的独立研究项目，探索如何运用消费者行为与营销研究帮助小企业作出更清晰的决策。
+zh-CN,k46,translated-or-neutral,Read existing insights,阅读现有研究洞察
+zh-CN,contact,translated-or-neutral,Questions or suggestions? Email,有问题或建议？请发送邮件至
+zh-CN,contactNote,translated-or-neutral,Research work is subject to scope and availability; no payments are accepted through this site.,研究服务取决于工作范围和档期；本站暂不接受付款。
+zh-TW,k1,translated-or-neutral,Services,服務
+zh-TW,k2,translated-or-neutral,Process,流程
+zh-TW,k3,translated-or-neutral,Insights,文章
+zh-TW,k4,translated-or-neutral,Tools,工具
+zh-TW,k5,translated-or-neutral,Contact,聯絡
+zh-TW,k6,translated-or-neutral,INDEPENDENT RESEARCH PILOT,獨立研究試點
+zh-TW,k7,translated-or-neutral,Better market decisions start with clearer evidence.,更好的市場決策，從更清晰的證據開始。
+zh-TW,k8,english-fallback,"Practical consumer and competitor research for independent brands and small businesses. Concise briefs based on public information, with transparent sources and limitations.","Practical consumer and competitor research for independent brands and small businesses. Concise briefs based on public information, with transparent sources and limitations."
+zh-TW,k9,translated-or-neutral,Explore our research brief,了解研究簡報
+zh-TW,k10,translated-or-neutral,START SMALL,從小處開始
+zh-TW,k11,translated-or-neutral,One question. One useful brief.,一個問題，一份實用的簡報。
+zh-TW,k12,translated-or-neutral,Starter Market Research Brief,基礎市場研究簡報
+zh-TW,k13,english-fallback,A proposed 5–8 page English PDF answering one clearly scoped business question.,A proposed 5–8 page English PDF answering one clearly scoped business question.
+zh-TW,k14,english-fallback,Consumer needs and possible buying barriers,Consumer needs and possible buying barriers
+zh-TW,k15,english-fallback,Comparison of 3–5 competitors using public information,Comparison of 3–5 competitors using public information
+zh-TW,k16,english-fallback,"Linked evidence, limitations and three practical next steps","Linked evidence, limitations and three practical next steps"
+zh-TW,k17,english-fallback,"Desk research only. No invented survey findings, guaranteed sales results, or confidential competitor information.","Desk research only. No invented survey findings, guaranteed sales results, or confidential competitor information."
+zh-TW,k18,english-fallback,"Illustrative pilot price, not yet validated. Subject to agreed scope.","Illustrative pilot price, not yet validated. Subject to agreed scope."
+zh-TW,k19,translated-or-neutral,HOW IT WORKS,工作流程
+zh-TW,k20,translated-or-neutral,"Clear process, honest evidence",清晰的流程，真實的證據
+zh-TW,k21,translated-or-neutral,01 · Define,01 · Define
+zh-TW,k22,english-fallback,Ask a specific question,Ask a specific question
+zh-TW,k23,english-fallback,"Identify the market, target customer and decision.","Identify the market, target customer and decision."
+zh-TW,k24,translated-or-neutral,02 · Research,02 · Research
+zh-TW,k25,english-fallback,Review public sources,Review public sources
+zh-TW,k26,english-fallback,Separate supported evidence from interpretation.,Separate supported evidence from interpretation.
+zh-TW,k27,translated-or-neutral,03 · Apply,03 · Apply
+zh-TW,k28,english-fallback,Receive a focused brief,Receive a focused brief
+zh-TW,k29,english-fallback,"Review insights, limitations and possible next steps.","Review insights, limitations and possible next steps."
+zh-TW,k30,translated-or-neutral,FREE TOOLS,免費工具
+zh-TW,k31,translated-or-neutral,Simple business calculators,簡單的商業計算器
+zh-TW,k32,translated-or-neutral,Campaign revenue return,廣告活動收入回報
+zh-TW,k33,english-fallback,"Revenue-based comparison, not profit ROI.","Revenue-based comparison, not profit ROI."
+zh-TW,k34,english-fallback,Attributed revenue ($),Attributed revenue ($)
+zh-TW,k35,english-fallback,Marketing spend ($),Marketing spend ($)
+zh-TW,k36,translated-or-neutral,Calculate,計算
+zh-TW,k37,translated-or-neutral,Break-even units,損益兩平銷量
+zh-TW,k38,english-fallback,Assumes constant unit price and costs.,Assumes constant unit price and costs.
+zh-TW,k39,english-fallback,Fixed costs ($),Fixed costs ($)
+zh-TW,k40,english-fallback,Price per unit ($),Price per unit ($)
+zh-TW,k41,english-fallback,Variable cost per unit ($),Variable cost per unit ($)
+zh-TW,k42,translated-or-neutral,Calculate,計算
+zh-TW,k43,translated-or-neutral,ABOUT & CONTACT,關於與聯絡
+zh-TW,k44,translated-or-neutral,Research-minded. Practical by design.,以研究為基礎，以實用為導向。
+zh-TW,k45,english-fallback,MarkEconly is an early-stage independent project exploring how consumer behaviour and marketing research can help small businesses make clearer decisions.,MarkEconly is an early-stage independent project exploring how consumer behaviour and marketing research can help small businesses make clearer decisions.
+zh-TW,k46,english-fallback,Read existing insights,Read existing insights
+zh-TW,contact,translated-or-neutral,Questions or suggestions? Email,有問題或建議？請寄信至
+zh-TW,contactNote,english-fallback,Research work is subject to scope and availability; no payments are accepted through this site.,Research work is subject to scope and availability; no payments are accepted through this site.
+fr,k1,translated-or-neutral,Services,Services
+fr,k2,translated-or-neutral,Process,Méthode
+fr,k3,translated-or-neutral,Insights,Articles
+fr,k4,translated-or-neutral,Tools,Outils
+fr,k5,translated-or-neutral,Contact,Contact
+fr,k6,translated-or-neutral,INDEPENDENT RESEARCH PILOT,PROJET DE RECHERCHE INDÉPENDANT
+fr,k7,translated-or-neutral,Better market decisions start with clearer evidence.,De meilleures décisions de marché commencent par des preuves plus claires.
+fr,k8,english-fallback,"Practical consumer and competitor research for independent brands and small businesses. Concise briefs based on public information, with transparent sources and limitations.","Practical consumer and competitor research for independent brands and small businesses. Concise briefs based on public information, with transparent sources and limitations."
+fr,k9,translated-or-neutral,Explore our research brief,Découvrir notre étude
+fr,k10,translated-or-neutral,START SMALL,COMMENCER SIMPLEMENT
+fr,k11,translated-or-neutral,One question. One useful brief.,Une question. Un rapport utile.
+fr,k12,translated-or-neutral,Starter Market Research Brief,Rapport de recherche de marché
+fr,k13,english-fallback,A proposed 5–8 page English PDF answering one clearly scoped business question.,A proposed 5–8 page English PDF answering one clearly scoped business question.
+fr,k14,english-fallback,Consumer needs and possible buying barriers,Consumer needs and possible buying barriers
+fr,k15,english-fallback,Comparison of 3–5 competitors using public information,Comparison of 3–5 competitors using public information
+fr,k16,english-fallback,"Linked evidence, limitations and three practical next steps","Linked evidence, limitations and three practical next steps"
+fr,k17,english-fallback,"Desk research only. No invented survey findings, guaranteed sales results, or confidential competitor information.","Desk research only. No invented survey findings, guaranteed sales results, or confidential competitor information."
+fr,k18,english-fallback,"Illustrative pilot price, not yet validated. Subject to agreed scope.","Illustrative pilot price, not yet validated. Subject to agreed scope."
+fr,k19,translated-or-neutral,HOW IT WORKS,NOTRE MÉTHODE
+fr,k20,translated-or-neutral,"Clear process, honest evidence","Une méthode claire, des preuves fiables"
+fr,k21,translated-or-neutral,01 · Define,01 · Define
+fr,k22,english-fallback,Ask a specific question,Ask a specific question
+fr,k23,english-fallback,"Identify the market, target customer and decision.","Identify the market, target customer and decision."
+fr,k24,translated-or-neutral,02 · Research,02 · Research
+fr,k25,english-fallback,Review public sources,Review public sources
+fr,k26,english-fallback,Separate supported evidence from interpretation.,Separate supported evidence from interpretation.
+fr,k27,translated-or-neutral,03 · Apply,03 · Apply
+fr,k28,english-fallback,Receive a focused brief,Receive a focused brief
+fr,k29,english-fallback,"Review insights, limitations and possible next steps.","Review insights, limitations and possible next steps."
+fr,k30,translated-or-neutral,FREE TOOLS,OUTILS GRATUITS
+fr,k31,translated-or-neutral,Simple business calculators,Calculateurs simples
+fr,k32,translated-or-neutral,Campaign revenue return,Rendement des revenus publicitaires
+fr,k33,english-fallback,"Revenue-based comparison, not profit ROI.","Revenue-based comparison, not profit ROI."
+fr,k34,english-fallback,Attributed revenue ($),Attributed revenue ($)
+fr,k35,english-fallback,Marketing spend ($),Marketing spend ($)
+fr,k36,translated-or-neutral,Calculate,Calculer
+fr,k37,translated-or-neutral,Break-even units,Seuil de rentabilité
+fr,k38,english-fallback,Assumes constant unit price and costs.,Assumes constant unit price and costs.
+fr,k39,english-fallback,Fixed costs ($),Fixed costs ($)
+fr,k40,english-fallback,Price per unit ($),Price per unit ($)
+fr,k41,english-fallback,Variable cost per unit ($),Variable cost per unit ($)
+fr,k42,translated-or-neutral,Calculate,Calculer
+fr,k43,translated-or-neutral,ABOUT & CONTACT,À PROPOS ET CONTACT
+fr,k44,translated-or-neutral,Research-minded. Practical by design.,"Fondé sur la recherche, conçu pour être utile."
+fr,k45,english-fallback,MarkEconly is an early-stage independent project exploring how consumer behaviour and marketing research can help small businesses make clearer decisions.,MarkEconly is an early-stage independent project exploring how consumer behaviour and marketing research can help small businesses make clearer decisions.
+fr,k46,english-fallback,Read existing insights,Read existing insights
+fr,contact,translated-or-neutral,Questions or suggestions? Email,Questions ou suggestions ? Écrivez à
+fr,contactNote,english-fallback,Research work is subject to scope and availability; no payments are accepted through this site.,Research work is subject to scope and availability; no payments are accepted through this site.
+de,k1,translated-or-neutral,Services,Leistungen
+de,k2,translated-or-neutral,Process,Ablauf
+de,k3,translated-or-neutral,Insights,Artikel
+de,k4,translated-or-neutral,Tools,Tools
+de,k5,translated-or-neutral,Contact,Kontakt
+de,k6,translated-or-neutral,INDEPENDENT RESEARCH PILOT,UNABHÄNGIGES RECHERCHEPROJEKT
+de,k7,translated-or-neutral,Better market decisions start with clearer evidence.,Bessere Marktentscheidungen beginnen mit klareren Erkenntnissen.
+de,k8,english-fallback,"Practical consumer and competitor research for independent brands and small businesses. Concise briefs based on public information, with transparent sources and limitations.","Practical consumer and competitor research for independent brands and small businesses. Concise briefs based on public information, with transparent sources and limitations."
+de,k9,translated-or-neutral,Explore our research brief,Rechercheangebot ansehen
+de,k10,translated-or-neutral,START SMALL,KLEIN ANFANGEN
+de,k11,translated-or-neutral,One question. One useful brief.,Eine Frage. Ein nützlicher Bericht.
+de,k12,translated-or-neutral,Starter Market Research Brief,Kompakter Marktrecherchebericht
+de,k13,english-fallback,A proposed 5–8 page English PDF answering one clearly scoped business question.,A proposed 5–8 page English PDF answering one clearly scoped business question.
+de,k14,english-fallback,Consumer needs and possible buying barriers,Consumer needs and possible buying barriers
+de,k15,english-fallback,Comparison of 3–5 competitors using public information,Comparison of 3–5 competitors using public information
+de,k16,english-fallback,"Linked evidence, limitations and three practical next steps","Linked evidence, limitations and three practical next steps"
+de,k17,english-fallback,"Desk research only. No invented survey findings, guaranteed sales results, or confidential competitor information.","Desk research only. No invented survey findings, guaranteed sales results, or confidential competitor information."
+de,k18,english-fallback,"Illustrative pilot price, not yet validated. Subject to agreed scope.","Illustrative pilot price, not yet validated. Subject to agreed scope."
+de,k19,translated-or-neutral,HOW IT WORKS,UNSER ABLAUF
+de,k20,translated-or-neutral,"Clear process, honest evidence","Klarer Ablauf, verlässliche Belege"
+de,k21,translated-or-neutral,01 · Define,01 · Define
+de,k22,english-fallback,Ask a specific question,Ask a specific question
+de,k23,english-fallback,"Identify the market, target customer and decision.","Identify the market, target customer and decision."
+de,k24,translated-or-neutral,02 · Research,02 · Research
+de,k25,english-fallback,Review public sources,Review public sources
+de,k26,english-fallback,Separate supported evidence from interpretation.,Separate supported evidence from interpretation.
+de,k27,translated-or-neutral,03 · Apply,03 · Apply
+de,k28,english-fallback,Receive a focused brief,Receive a focused brief
+de,k29,english-fallback,"Review insights, limitations and possible next steps.","Review insights, limitations and possible next steps."
+de,k30,translated-or-neutral,FREE TOOLS,KOSTENLOSE TOOLS
+de,k31,translated-or-neutral,Simple business calculators,Einfache Geschäftsrechner
+de,k32,translated-or-neutral,Campaign revenue return,Umsatzrendite einer Kampagne
+de,k33,english-fallback,"Revenue-based comparison, not profit ROI.","Revenue-based comparison, not profit ROI."
+de,k34,english-fallback,Attributed revenue ($),Attributed revenue ($)
+de,k35,english-fallback,Marketing spend ($),Marketing spend ($)
+de,k36,translated-or-neutral,Calculate,Berechnen
+de,k37,translated-or-neutral,Break-even units,Break-even-Menge
+de,k38,english-fallback,Assumes constant unit price and costs.,Assumes constant unit price and costs.
+de,k39,english-fallback,Fixed costs ($),Fixed costs ($)
+de,k40,english-fallback,Price per unit ($),Price per unit ($)
+de,k41,english-fallback,Variable cost per unit ($),Variable cost per unit ($)
+de,k42,translated-or-neutral,Calculate,Berechnen
+de,k43,translated-or-neutral,ABOUT & CONTACT,ÜBER UNS & KONTAKT
+de,k44,translated-or-neutral,Research-minded. Practical by design.,Forschungsorientiert und praxisnah.
+de,k45,english-fallback,MarkEconly is an early-stage independent project exploring how consumer behaviour and marketing research can help small businesses make clearer decisions.,MarkEconly is an early-stage independent project exploring how consumer behaviour and marketing research can help small businesses make clearer decisions.
+de,k46,english-fallback,Read existing insights,Read existing insights
+de,contact,translated-or-neutral,Questions or suggestions? Email,Fragen oder Anregungen? E-Mail an
+de,contactNote,english-fallback,Research work is subject to scope and availability; no payments are accepted through this site.,Research work is subject to scope and availability; no payments are accepted through this site.
+es,k1,translated-or-neutral,Services,Servicios
+es,k2,translated-or-neutral,Process,Proceso
+es,k3,translated-or-neutral,Insights,Artículos
+es,k4,translated-or-neutral,Tools,Herramientas
+es,k5,translated-or-neutral,Contact,Contacto
+es,k6,translated-or-neutral,INDEPENDENT RESEARCH PILOT,PROYECTO DE INVESTIGACIÓN INDEPENDIENTE
+es,k7,translated-or-neutral,Better market decisions start with clearer evidence.,Las mejores decisiones de mercado empiezan con pruebas más claras.
+es,k8,english-fallback,"Practical consumer and competitor research for independent brands and small businesses. Concise briefs based on public information, with transparent sources and limitations.","Practical consumer and competitor research for independent brands and small businesses. Concise briefs based on public information, with transparent sources and limitations."
+es,k9,translated-or-neutral,Explore our research brief,Explorar el informe
+es,k10,translated-or-neutral,START SMALL,EMPEZAR POCO A POCO
+es,k11,translated-or-neutral,One question. One useful brief.,Una pregunta. Un informe útil.
+es,k12,translated-or-neutral,Starter Market Research Brief,Informe inicial de mercado
+es,k13,english-fallback,A proposed 5–8 page English PDF answering one clearly scoped business question.,A proposed 5–8 page English PDF answering one clearly scoped business question.
+es,k14,english-fallback,Consumer needs and possible buying barriers,Consumer needs and possible buying barriers
+es,k15,english-fallback,Comparison of 3–5 competitors using public information,Comparison of 3–5 competitors using public information
+es,k16,english-fallback,"Linked evidence, limitations and three practical next steps","Linked evidence, limitations and three practical next steps"
+es,k17,english-fallback,"Desk research only. No invented survey findings, guaranteed sales results, or confidential competitor information.","Desk research only. No invented survey findings, guaranteed sales results, or confidential competitor information."
+es,k18,english-fallback,"Illustrative pilot price, not yet validated. Subject to agreed scope.","Illustrative pilot price, not yet validated. Subject to agreed scope."
+es,k19,translated-or-neutral,HOW IT WORKS,CÓMO FUNCIONA
+es,k20,translated-or-neutral,"Clear process, honest evidence","Proceso claro, evidencia fiable"
+es,k21,translated-or-neutral,01 · Define,01 · Define
+es,k22,english-fallback,Ask a specific question,Ask a specific question
+es,k23,english-fallback,"Identify the market, target customer and decision.","Identify the market, target customer and decision."
+es,k24,translated-or-neutral,02 · Research,02 · Research
+es,k25,english-fallback,Review public sources,Review public sources
+es,k26,english-fallback,Separate supported evidence from interpretation.,Separate supported evidence from interpretation.
+es,k27,translated-or-neutral,03 · Apply,03 · Apply
+es,k28,english-fallback,Receive a focused brief,Receive a focused brief
+es,k29,english-fallback,"Review insights, limitations and possible next steps.","Review insights, limitations and possible next steps."
+es,k30,translated-or-neutral,FREE TOOLS,HERRAMIENTAS GRATUITAS
+es,k31,translated-or-neutral,Simple business calculators,Calculadoras sencillas
+es,k32,translated-or-neutral,Campaign revenue return,Retorno de ingresos de campaña
+es,k33,english-fallback,"Revenue-based comparison, not profit ROI.","Revenue-based comparison, not profit ROI."
+es,k34,english-fallback,Attributed revenue ($),Attributed revenue ($)
+es,k35,english-fallback,Marketing spend ($),Marketing spend ($)
+es,k36,translated-or-neutral,Calculate,Calcular
+es,k37,translated-or-neutral,Break-even units,Unidades de equilibrio
+es,k38,english-fallback,Assumes constant unit price and costs.,Assumes constant unit price and costs.
+es,k39,english-fallback,Fixed costs ($),Fixed costs ($)
+es,k40,english-fallback,Price per unit ($),Price per unit ($)
+es,k41,english-fallback,Variable cost per unit ($),Variable cost per unit ($)
+es,k42,translated-or-neutral,Calculate,Calcular
+es,k43,translated-or-neutral,ABOUT & CONTACT,SOBRE NOSOTROS Y CONTACTO
+es,k44,translated-or-neutral,Research-minded. Practical by design.,Investigación práctica y transparente.
+es,k45,english-fallback,MarkEconly is an early-stage independent project exploring how consumer behaviour and marketing research can help small businesses make clearer decisions.,MarkEconly is an early-stage independent project exploring how consumer behaviour and marketing research can help small businesses make clearer decisions.
+es,k46,english-fallback,Read existing insights,Read existing insights
+es,contact,translated-or-neutral,Questions or suggestions? Email,¿Preguntas o sugerencias? Escribe a
+es,contactNote,english-fallback,Research work is subject to scope and availability; no payments are accepted through this site.,Research work is subject to scope and availability; no payments are accepted through this site.
+pt,k1,translated-or-neutral,Services,Serviços
+pt,k2,translated-or-neutral,Process,Processo
+pt,k3,translated-or-neutral,Insights,Artigos
+pt,k4,translated-or-neutral,Tools,Ferramentas
+pt,k5,translated-or-neutral,Contact,Contato
+pt,k6,translated-or-neutral,INDEPENDENT RESEARCH PILOT,PROJETO DE PESQUISA INDEPENDENTE
+pt,k7,translated-or-neutral,Better market decisions start with clearer evidence.,Melhores decisões de mercado começam com evidências mais claras.
+pt,k8,english-fallback,"Practical consumer and competitor research for independent brands and small businesses. Concise briefs based on public information, with transparent sources and limitations.","Practical consumer and competitor research for independent brands and small businesses. Concise briefs based on public information, with transparent sources and limitations."
+pt,k9,translated-or-neutral,Explore our research brief,Conhecer o relatório
+pt,k10,translated-or-neutral,START SMALL,COMECE PEQUENO
+pt,k11,translated-or-neutral,One question. One useful brief.,Uma pergunta. Um relatório útil.
+pt,k12,translated-or-neutral,Starter Market Research Brief,Relatório inicial de mercado
+pt,k13,english-fallback,A proposed 5–8 page English PDF answering one clearly scoped business question.,A proposed 5–8 page English PDF answering one clearly scoped business question.
+pt,k14,english-fallback,Consumer needs and possible buying barriers,Consumer needs and possible buying barriers
+pt,k15,english-fallback,Comparison of 3–5 competitors using public information,Comparison of 3–5 competitors using public information
+pt,k16,english-fallback,"Linked evidence, limitations and three practical next steps","Linked evidence, limitations and three practical next steps"
+pt,k17,english-fallback,"Desk research only. No invented survey findings, guaranteed sales results, or confidential competitor information.","Desk research only. No invented survey findings, guaranteed sales results, or confidential competitor information."
+pt,k18,english-fallback,"Illustrative pilot price, not yet validated. Subject to agreed scope.","Illustrative pilot price, not yet validated. Subject to agreed scope."
+pt,k19,translated-or-neutral,HOW IT WORKS,COMO FUNCIONA
+pt,k20,translated-or-neutral,"Clear process, honest evidence","Processo claro, evidências confiáveis"
+pt,k21,translated-or-neutral,01 · Define,01 · Define
+pt,k22,english-fallback,Ask a specific question,Ask a specific question
+pt,k23,english-fallback,"Identify the market, target customer and decision.","Identify the market, target customer and decision."
+pt,k24,translated-or-neutral,02 · Research,02 · Research
+pt,k25,english-fallback,Review public sources,Review public sources
+pt,k26,english-fallback,Separate supported evidence from interpretation.,Separate supported evidence from interpretation.
+pt,k27,translated-or-neutral,03 · Apply,03 · Apply
+pt,k28,english-fallback,Receive a focused brief,Receive a focused brief
+pt,k29,english-fallback,"Review insights, limitations and possible next steps.","Review insights, limitations and possible next steps."
+pt,k30,translated-or-neutral,FREE TOOLS,FERRAMENTAS GRATUITAS
+pt,k31,translated-or-neutral,Simple business calculators,Calculadoras simples
+pt,k32,translated-or-neutral,Campaign revenue return,Retorno de receita da campanha
+pt,k33,english-fallback,"Revenue-based comparison, not profit ROI.","Revenue-based comparison, not profit ROI."
+pt,k34,english-fallback,Attributed revenue ($),Attributed revenue ($)
+pt,k35,english-fallback,Marketing spend ($),Marketing spend ($)
+pt,k36,translated-or-neutral,Calculate,Calcular
+pt,k37,translated-or-neutral,Break-even units,Ponto de equilíbrio
+pt,k38,english-fallback,Assumes constant unit price and costs.,Assumes constant unit price and costs.
+pt,k39,english-fallback,Fixed costs ($),Fixed costs ($)
+pt,k40,english-fallback,Price per unit ($),Price per unit ($)
+pt,k41,english-fallback,Variable cost per unit ($),Variable cost per unit ($)
+pt,k42,translated-or-neutral,Calculate,Calcular
+pt,k43,translated-or-neutral,ABOUT & CONTACT,SOBRE E CONTATO
+pt,k44,translated-or-neutral,Research-minded. Practical by design.,Pesquisa com foco prático.
+pt,k45,english-fallback,MarkEconly is an early-stage independent project exploring how consumer behaviour and marketing research can help small businesses make clearer decisions.,MarkEconly is an early-stage independent project exploring how consumer behaviour and marketing research can help small businesses make clearer decisions.
+pt,k46,english-fallback,Read existing insights,Read existing insights
+pt,contact,translated-or-neutral,Questions or suggestions? Email,Dúvidas ou sugestões? Envie e-mail para
+pt,contactNote,english-fallback,Research work is subject to scope and availability; no payments are accepted through this site.,Research work is subject to scope and availability; no payments are accepted through this site.
+ja,k1,translated-or-neutral,Services,サービス
+ja,k2,translated-or-neutral,Process,進め方
+ja,k3,translated-or-neutral,Insights,記事
+ja,k4,translated-or-neutral,Tools,ツール
+ja,k5,translated-or-neutral,Contact,お問い合わせ
+ja,k6,translated-or-neutral,INDEPENDENT RESEARCH PILOT,独立リサーチプロジェクト
+ja,k7,translated-or-neutral,Better market decisions start with clearer evidence.,より良い市場判断は、より明確な根拠から。
+ja,k8,english-fallback,"Practical consumer and competitor research for independent brands and small businesses. Concise briefs based on public information, with transparent sources and limitations.","Practical consumer and competitor research for independent brands and small businesses. Concise briefs based on public information, with transparent sources and limitations."
+ja,k9,translated-or-neutral,Explore our research brief,調査レポートを見る
+ja,k10,translated-or-neutral,START SMALL,小さく始める
+ja,k11,translated-or-neutral,One question. One useful brief.,一つの問いに、一つの役立つレポート。
+ja,k12,translated-or-neutral,Starter Market Research Brief,市場調査ミニレポート
+ja,k13,english-fallback,A proposed 5–8 page English PDF answering one clearly scoped business question.,A proposed 5–8 page English PDF answering one clearly scoped business question.
+ja,k14,english-fallback,Consumer needs and possible buying barriers,Consumer needs and possible buying barriers
+ja,k15,english-fallback,Comparison of 3–5 competitors using public information,Comparison of 3–5 competitors using public information
+ja,k16,english-fallback,"Linked evidence, limitations and three practical next steps","Linked evidence, limitations and three practical next steps"
+ja,k17,english-fallback,"Desk research only. No invented survey findings, guaranteed sales results, or confidential competitor information.","Desk research only. No invented survey findings, guaranteed sales results, or confidential competitor information."
+ja,k18,english-fallback,"Illustrative pilot price, not yet validated. Subject to agreed scope.","Illustrative pilot price, not yet validated. Subject to agreed scope."
+ja,k19,translated-or-neutral,HOW IT WORKS,進め方
+ja,k20,translated-or-neutral,"Clear process, honest evidence",透明な調査プロセス
+ja,k21,translated-or-neutral,01 · Define,01 · Define
+ja,k22,english-fallback,Ask a specific question,Ask a specific question
+ja,k23,english-fallback,"Identify the market, target customer and decision.","Identify the market, target customer and decision."
+ja,k24,translated-or-neutral,02 · Research,02 · Research
+ja,k25,english-fallback,Review public sources,Review public sources
+ja,k26,english-fallback,Separate supported evidence from interpretation.,Separate supported evidence from interpretation.
+ja,k27,translated-or-neutral,03 · Apply,03 · Apply
+ja,k28,english-fallback,Receive a focused brief,Receive a focused brief
+ja,k29,english-fallback,"Review insights, limitations and possible next steps.","Review insights, limitations and possible next steps."
+ja,k30,translated-or-neutral,FREE TOOLS,無料ツール
+ja,k31,translated-or-neutral,Simple business calculators,シンプルな計算ツール
+ja,k32,translated-or-neutral,Campaign revenue return,広告売上リターン
+ja,k33,english-fallback,"Revenue-based comparison, not profit ROI.","Revenue-based comparison, not profit ROI."
+ja,k34,english-fallback,Attributed revenue ($),Attributed revenue ($)
+ja,k35,english-fallback,Marketing spend ($),Marketing spend ($)
+ja,k36,translated-or-neutral,Calculate,計算
+ja,k37,translated-or-neutral,Break-even units,損益分岐点数量
+ja,k38,english-fallback,Assumes constant unit price and costs.,Assumes constant unit price and costs.
+ja,k39,english-fallback,Fixed costs ($),Fixed costs ($)
+ja,k40,english-fallback,Price per unit ($),Price per unit ($)
+ja,k41,english-fallback,Variable cost per unit ($),Variable cost per unit ($)
+ja,k42,translated-or-neutral,Calculate,計算
+ja,k43,translated-or-neutral,ABOUT & CONTACT,概要・お問い合わせ
+ja,k44,translated-or-neutral,Research-minded. Practical by design.,研究に基づき、実務に役立つ形へ。
+ja,k45,english-fallback,MarkEconly is an early-stage independent project exploring how consumer behaviour and marketing research can help small businesses make clearer decisions.,MarkEconly is an early-stage independent project exploring how consumer behaviour and marketing research can help small businesses make clearer decisions.
+ja,k46,english-fallback,Read existing insights,Read existing insights
+ja,contact,translated-or-neutral,Questions or suggestions? Email,ご質問・ご意見はこちら：
+ja,contactNote,english-fallback,Research work is subject to scope and availability; no payments are accepted through this site.,Research work is subject to scope and availability; no payments are accepted through this site.
+ko,k1,translated-or-neutral,Services,서비스
+ko,k2,translated-or-neutral,Process,진행 과정
+ko,k3,translated-or-neutral,Insights,인사이트
+ko,k4,translated-or-neutral,Tools,도구
+ko,k5,translated-or-neutral,Contact,문의
+ko,k6,translated-or-neutral,INDEPENDENT RESEARCH PILOT,독립 리서치 프로젝트
+ko,k7,translated-or-neutral,Better market decisions start with clearer evidence.,더 나은 시장 의사결정은 더 명확한 근거에서 시작됩니다.
+ko,k8,english-fallback,"Practical consumer and competitor research for independent brands and small businesses. Concise briefs based on public information, with transparent sources and limitations.","Practical consumer and competitor research for independent brands and small businesses. Concise briefs based on public information, with transparent sources and limitations."
+ko,k9,translated-or-neutral,Explore our research brief,조사 보고서 보기
+ko,k10,translated-or-neutral,START SMALL,작게 시작하기
+ko,k11,translated-or-neutral,One question. One useful brief.,"질문 하나, 유용한 보고서 하나."
+ko,k12,translated-or-neutral,Starter Market Research Brief,기초 시장 조사 보고서
+ko,k13,english-fallback,A proposed 5–8 page English PDF answering one clearly scoped business question.,A proposed 5–8 page English PDF answering one clearly scoped business question.
+ko,k14,english-fallback,Consumer needs and possible buying barriers,Consumer needs and possible buying barriers
+ko,k15,english-fallback,Comparison of 3–5 competitors using public information,Comparison of 3–5 competitors using public information
+ko,k16,english-fallback,"Linked evidence, limitations and three practical next steps","Linked evidence, limitations and three practical next steps"
+ko,k17,english-fallback,"Desk research only. No invented survey findings, guaranteed sales results, or confidential competitor information.","Desk research only. No invented survey findings, guaranteed sales results, or confidential competitor information."
+ko,k18,english-fallback,"Illustrative pilot price, not yet validated. Subject to agreed scope.","Illustrative pilot price, not yet validated. Subject to agreed scope."
+ko,k19,translated-or-neutral,HOW IT WORKS,진행 과정
+ko,k20,translated-or-neutral,"Clear process, honest evidence",명확한 과정과 신뢰할 수 있는 근거
+ko,k21,translated-or-neutral,01 · Define,01 · Define
+ko,k22,english-fallback,Ask a specific question,Ask a specific question
+ko,k23,english-fallback,"Identify the market, target customer and decision.","Identify the market, target customer and decision."
+ko,k24,translated-or-neutral,02 · Research,02 · Research
+ko,k25,english-fallback,Review public sources,Review public sources
+ko,k26,english-fallback,Separate supported evidence from interpretation.,Separate supported evidence from interpretation.
+ko,k27,translated-or-neutral,03 · Apply,03 · Apply
+ko,k28,english-fallback,Receive a focused brief,Receive a focused brief
+ko,k29,english-fallback,"Review insights, limitations and possible next steps.","Review insights, limitations and possible next steps."
+ko,k30,translated-or-neutral,FREE TOOLS,무료 도구
+ko,k31,translated-or-neutral,Simple business calculators,간단한 계산기
+ko,k32,translated-or-neutral,Campaign revenue return,캠페인 매출 수익률
+ko,k33,english-fallback,"Revenue-based comparison, not profit ROI.","Revenue-based comparison, not profit ROI."
+ko,k34,english-fallback,Attributed revenue ($),Attributed revenue ($)
+ko,k35,english-fallback,Marketing spend ($),Marketing spend ($)
+ko,k36,translated-or-neutral,Calculate,계산
+ko,k37,translated-or-neutral,Break-even units,손익분기 판매량
+ko,k38,english-fallback,Assumes constant unit price and costs.,Assumes constant unit price and costs.
+ko,k39,english-fallback,Fixed costs ($),Fixed costs ($)
+ko,k40,english-fallback,Price per unit ($),Price per unit ($)
+ko,k41,english-fallback,Variable cost per unit ($),Variable cost per unit ($)
+ko,k42,translated-or-neutral,Calculate,계산
+ko,k43,translated-or-neutral,ABOUT & CONTACT,소개 및 문의
+ko,k44,translated-or-neutral,Research-minded. Practical by design.,연구에 기반한 실용적 접근.
+ko,k45,english-fallback,MarkEconly is an early-stage independent project exploring how consumer behaviour and marketing research can help small businesses make clearer decisions.,MarkEconly is an early-stage independent project exploring how consumer behaviour and marketing research can help small businesses make clearer decisions.
+ko,k46,english-fallback,Read existing insights,Read existing insights
+ko,contact,translated-or-neutral,Questions or suggestions? Email,질문이나 제안이 있으시면 이메일을 보내주세요:
+ko,contactNote,english-fallback,Research work is subject to scope and availability; no payments are accepted through this site.,Research work is subject to scope and availability; no payments are accepted through this site.

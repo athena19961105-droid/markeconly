@@ -1,178 +1,20 @@
-// ===== Language Data =====
-const translations = {
-  en: {
-    "nav.insights": "Insights",
-    "nav.tools": "Tools",
-    "nav.about": "About",
-    "nav.contact": "Contact",
-    "hero.title": "Clear Insights on<br />Marketing & Economics",
-    "hero.subtitle": "Practical strategies, real-world cases, and useful tools — explained simply for professionals and learners worldwide.",
-    "hero.cta1": "Explore Insights",
-    "hero.cta2": "Try Free Tools",
-    "insights.title": "Latest Insights",
-    "insights.desc": "Short, actionable articles on marketing strategy and economic trends.",
-    "insights.viewAll": "View all insights →",
-    "articles.pageTitle": "All Insights",
-    "articles.pageDesc": "Practical articles on marketing strategy and economic trends.",
-    "article.back": "← Back to Insights",
-    "card1.title": "How to Calculate Real Marketing ROI in 2026",
-    "card1.desc": "Most teams still use outdated metrics. Here’s a simple framework that actually shows profit contribution.",
-    "card2.title": "Why Interest Rates Still Matter for Small Businesses",
-    "card2.desc": "A clear explanation of how monetary policy affects pricing, inventory, and cash flow decisions.",
-    "card3.title": "Cross-Border Marketing: What Actually Works in 2026",
-    "card3.desc": "Lessons from brands that successfully expanded into new markets without wasting budget.",
-    "card.read": "Read more →",
-    "tools.title": "Free Business Tools",
-    "tools.desc": "Simple calculators to help you make better decisions. No signup required.",
-    "tool1.title": "Marketing ROI Calculator",
-    "tool1.desc": "Estimate return on your marketing spend in seconds.",
-    "tool1.revenue": "Revenue from campaign ($)",
-    "tool1.cost": "Marketing cost ($)",
-    "tool1.btn": "Calculate ROI",
-    "tool2.title": "Break-even Calculator",
-    "tool2.desc": "Find out how many units you need to sell to cover costs.",
-    "tool2.fixed": "Fixed costs ($)",
-    "tool2.price": "Price per unit ($)",
-    "tool2.variable": "Variable cost per unit ($)",
-    "tool2.btn": "Calculate",
-    "about.title": "About MarkEconly",
-    "about.p1": "MarkEconly was created to bridge the gap between academic knowledge and real-world business decisions. We focus on clear, practical explanations of marketing strategies and economic concepts.",
-    "about.p2": "Whether you are a marketer, entrepreneur, student, or simply curious about how markets work, our goal is to make complex ideas easy to understand and apply.",
-    "about.stat1": "Bilingual Content",
-    "about.stat2": "Tools & Articles",
-    "about.stat3": "Real-world Focus",
-    "ad.label": "Advertisement",
-    "footer.desc": "Clear insights on marketing and economics for a global audience.",
-    "footer.contact": "Questions or suggestions?"
-  },
-  zh: {
-    "nav.insights": "洞察文章",
-    "nav.tools": "实用工具",
-    "nav.about": "关于我们",
-    "nav.contact": "联系",
-    "hero.title": "清晰解读<br />营销与经济",
-    "hero.subtitle": "实用策略、真实案例与免费工具——用简单语言讲清楚，帮助全球职场人与学习者做更好决策。",
-    "hero.cta1": "浏览洞察",
-    "hero.cta2": "试用工具",
-    "insights.title": "最新洞察",
-    "insights.desc": "短小精悍、可落地的营销策略与经济趋势解读。",
-    "insights.viewAll": "查看全部洞察 →",
-    "articles.pageTitle": "全部洞察文章",
-    "articles.pageDesc": "关于营销策略与经济趋势的实用文章。",
-    "article.back": "← 返回文章列表",
-    "card1.title": "2026年如何正确计算营销ROI",
-    "card1.desc": "很多团队还在用过时指标。这里有一个能真正反映利润贡献的简单框架。",
-    "card2.title": "为什么利率对小企业依然重要",
-    "card2.desc": "用通俗语言解释货币政策如何影响定价、库存和现金流决策。",
-    "card3.title": "跨境营销：2026年真正有效的方法",
-    "card3.desc": "从成功拓展新市场的品牌中总结出的经验，帮你避免预算浪费。",
-    "card.read": "阅读全文 →",
-    "tools.title": "免费商业工具",
-    "tools.desc": "帮助你快速做决策的简单计算器，无需注册。",
-    "tool1.title": "营销ROI计算器",
-    "tool1.desc": "几秒钟估算你的营销投入回报。",
-    "tool1.revenue": "活动带来的收入（元）",
-    "tool1.cost": "营销成本（元）",
-    "tool1.btn": "计算ROI",
-    "tool2.title": "盈亏平衡计算器",
-    "tool2.desc": "算出需要卖出多少件产品才能覆盖成本。",
-    "tool2.fixed": "固定成本（元）",
-    "tool2.price": "单价（元）",
-    "tool2.variable": "单位变动成本（元）",
-    "tool2.btn": "开始计算",
-    "about.title": "关于 MarkEconly",
-    "about.p1": "MarkEconly 的目标是连接学术知识与真实商业决策。我们专注于用清晰、实用的方式解读营销策略与经济概念。",
-    "about.p2": "无论你是营销人、创业者、学生，还是单纯对市场运作好奇，我们都希望把复杂的事情讲简单，让你能真正用起来。",
-    "about.stat1": "中英双语内容",
-    "about.stat2": "工具与文章",
-    "about.stat3": "聚焦实际应用",
-    "ad.label": "广告位",
-    "footer.desc": "面向全球用户的营销与经济清晰洞察。",
-    "footer.contact": "有问题或建议？"
-  }
-};
+'use strict';
+const el=id=>document.getElementById(id);
+const number=id=>el(id).value.trim()===''?NaN:Number(el(id).value);
+el('roiBtn').addEventListener('click',()=>{const revenue=number('rev'),cost=number('cost');el('roiOut').textContent=Number.isFinite(revenue)&&Number.isFinite(cost)&&revenue>=0&&cost>0?`Revenue-based return: ${(((revenue-cost)/cost)*100).toFixed(1)}%. Excludes product and operating costs.`:'Enter non-negative revenue and marketing spend greater than zero.';});
+el('beBtn').addEventListener('click',()=>{const fixed=number('fixed'),price=number('price'),variable=number('variable');el('beOut').textContent=[fixed,price,variable].every(Number.isFinite)&&fixed>=0&&price>0&&variable>=0&&price>variable?`Estimated break-even: ${Math.ceil(fixed/(price-variable)).toLocaleString('en-US')} units.`:'Enter valid costs and a unit price higher than variable cost.';});
 
-let currentLang = "en";
-
-// ===== Language Toggle =====
-const langBtn = document.getElementById("lang-toggle");
-
-function setLanguage(lang) {
-  currentLang = lang;
-  document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
-
-  document.querySelectorAll("[data-i18n]").forEach((el) => {
-    const key = el.getAttribute("data-i18n");
-    if (translations[lang][key]) {
-      el.innerHTML = translations[lang][key];
-    }
-  });
-
-  langBtn.textContent = lang === "en" ? "中文" : "EN";
+const translations = {"en": {"k1": "Services", "k2": "Process", "k3": "Insights", "k4": "Tools", "k5": "Contact", "k6": "INDEPENDENT RESEARCH PILOT", "k7": "Better market decisions start with clearer evidence.", "k8": "Practical consumer and competitor research for independent brands and small businesses. Concise briefs based on public information, with transparent sources and limitations.", "k9": "Explore our research brief", "k10": "START SMALL", "k11": "One question. One useful brief.", "k12": "Starter Market Research Brief", "k13": "A proposed 5–8 page English PDF answering one clearly scoped business question.", "k14": "Consumer needs and possible buying barriers", "k15": "Comparison of 3–5 competitors using public information", "k16": "Linked evidence, limitations and three practical next steps", "k17": "Desk research only. No invented survey findings, guaranteed sales results, or confidential competitor information.", "k18": "Illustrative pilot price, not yet validated. Subject to agreed scope.", "k19": "HOW IT WORKS", "k20": "Clear process, honest evidence", "k21": "01 · Define", "k22": "Ask a specific question", "k23": "Identify the market, target customer and decision.", "k24": "02 · Research", "k25": "Review public sources", "k26": "Separate supported evidence from interpretation.", "k27": "03 · Apply", "k28": "Receive a focused brief", "k29": "Review insights, limitations and possible next steps.", "k30": "FREE TOOLS", "k31": "Simple business calculators", "k32": "Campaign revenue return", "k33": "Revenue-based comparison, not profit ROI.", "k34": "Attributed revenue ($)", "k35": "Marketing spend ($)", "k36": "Calculate", "k37": "Break-even units", "k38": "Assumes constant unit price and costs.", "k39": "Fixed costs ($)", "k40": "Price per unit ($)", "k41": "Variable cost per unit ($)", "k42": "Calculate", "k43": "ABOUT & CONTACT", "k44": "Research-minded. Practical by design.", "k45": "MarkEconly is an early-stage independent project exploring how consumer behaviour and marketing research can help small businesses make clearer decisions.", "k46": "Read existing insights", "contact": "Questions or suggestions? Email", "contactNote": "Research work is subject to scope and availability; no payments are accepted through this site."}, "zh-CN": {"k1": "服务", "k2": "流程", "k3": "文章", "k4": "工具", "k5": "联系", "k6": "独立研究试点", "k7": "更好的市场决策，从更清晰的证据开始。", "k8": "为独立品牌和小企业提供实用的消费者与竞争对手研究，基于公开信息制作简洁报告，并说明来源和局限。", "k9": "了解研究简报", "k10": "从小处开始", "k11": "一个问题，一份有用的简报。", "k12": "基础市场研究简报", "k13": "针对一个明确的商业问题，提供拟议中的5–8页英文PDF报告。", "k14": "消费者需求及可能的购买障碍", "k15": "基于公开信息比较3–5家竞争者", "k16": "附来源证据、局限及三项实际建议", "k17": "Desk research only. No invented survey findings, guaranteed sales results, or confidential competitor information.", "k18": "Illustrative pilot price, not yet validated. Subject to agreed scope.", "k19": "工作流程", "k20": "清晰的流程，真实的证据", "k21": "01 · Define", "k22": "Ask a specific question", "k23": "Identify the market, target customer and decision.", "k24": "02 · Research", "k25": "Review public sources", "k26": "Separate supported evidence from interpretation.", "k27": "03 · Apply", "k28": "Receive a focused brief", "k29": "Review insights, limitations and possible next steps.", "k30": "免费工具", "k31": "简单的商业计算器", "k32": "广告活动收入回报", "k33": "Revenue-based comparison, not profit ROI.", "k34": "Attributed revenue ($)", "k35": "Marketing spend ($)", "k36": "计算", "k37": "盈亏平衡销量", "k38": "Assumes constant unit price and costs.", "k39": "Fixed costs ($)", "k40": "Price per unit ($)", "k41": "Variable cost per unit ($)", "k42": "计算", "k43": "关于与联系", "k44": "以研究为基础，以实用为导向。", "k45": "MarkEconly is an early-stage independent project exploring how consumer behaviour and marketing research can help small businesses make clearer decisions.", "k46": "Read existing insights", "contact": "有问题或建议？请发送邮件至", "contactNote": "研究服务取决于工作范围和档期；本站暂不接受付款。"}, "zh-TW": {"k1": "服務", "k2": "流程", "k3": "文章", "k4": "工具", "k5": "聯絡", "k6": "獨立研究試點", "k7": "更好的市場決策，從更清晰的證據開始。", "k8": "Practical consumer and competitor research for independent brands and small businesses. Concise briefs based on public information, with transparent sources and limitations.", "k9": "了解研究簡報", "k10": "從小處開始", "k11": "一個問題，一份實用的簡報。", "k12": "基礎市場研究簡報", "k13": "A proposed 5–8 page English PDF answering one clearly scoped business question.", "k14": "Consumer needs and possible buying barriers", "k15": "Comparison of 3–5 competitors using public information", "k16": "Linked evidence, limitations and three practical next steps", "k17": "Desk research only. No invented survey findings, guaranteed sales results, or confidential competitor information.", "k18": "Illustrative pilot price, not yet validated. Subject to agreed scope.", "k19": "工作流程", "k20": "清晰的流程，真實的證據", "k21": "01 · Define", "k22": "Ask a specific question", "k23": "Identify the market, target customer and decision.", "k24": "02 · Research", "k25": "Review public sources", "k26": "Separate supported evidence from interpretation.", "k27": "03 · Apply", "k28": "Receive a focused brief", "k29": "Review insights, limitations and possible next steps.", "k30": "免費工具", "k31": "簡單的商業計算器", "k32": "廣告活動收入回報", "k33": "Revenue-based comparison, not profit ROI.", "k34": "Attributed revenue ($)", "k35": "Marketing spend ($)", "k36": "計算", "k37": "損益兩平銷量", "k38": "Assumes constant unit price and costs.", "k39": "Fixed costs ($)", "k40": "Price per unit ($)", "k41": "Variable cost per unit ($)", "k42": "計算", "k43": "關於與聯絡", "k44": "以研究為基礎，以實用為導向。", "k45": "MarkEconly is an early-stage independent project exploring how consumer behaviour and marketing research can help small businesses make clearer decisions.", "k46": "Read existing insights", "contact": "有問題或建議？請寄信至", "contactNote": "Research work is subject to scope and availability; no payments are accepted through this site."}, "fr": {"k1": "Services", "k2": "Méthode", "k3": "Articles", "k4": "Outils", "k5": "Contact", "k6": "PROJET DE RECHERCHE INDÉPENDANT", "k7": "De meilleures décisions de marché commencent par des preuves plus claires.", "k8": "Practical consumer and competitor research for independent brands and small businesses. Concise briefs based on public information, with transparent sources and limitations.", "k9": "Découvrir notre étude", "k10": "COMMENCER SIMPLEMENT", "k11": "Une question. Un rapport utile.", "k12": "Rapport de recherche de marché", "k13": "A proposed 5–8 page English PDF answering one clearly scoped business question.", "k14": "Consumer needs and possible buying barriers", "k15": "Comparison of 3–5 competitors using public information", "k16": "Linked evidence, limitations and three practical next steps", "k17": "Desk research only. No invented survey findings, guaranteed sales results, or confidential competitor information.", "k18": "Illustrative pilot price, not yet validated. Subject to agreed scope.", "k19": "NOTRE MÉTHODE", "k20": "Une méthode claire, des preuves fiables", "k21": "01 · Define", "k22": "Ask a specific question", "k23": "Identify the market, target customer and decision.", "k24": "02 · Research", "k25": "Review public sources", "k26": "Separate supported evidence from interpretation.", "k27": "03 · Apply", "k28": "Receive a focused brief", "k29": "Review insights, limitations and possible next steps.", "k30": "OUTILS GRATUITS", "k31": "Calculateurs simples", "k32": "Rendement des revenus publicitaires", "k33": "Revenue-based comparison, not profit ROI.", "k34": "Attributed revenue ($)", "k35": "Marketing spend ($)", "k36": "Calculer", "k37": "Seuil de rentabilité", "k38": "Assumes constant unit price and costs.", "k39": "Fixed costs ($)", "k40": "Price per unit ($)", "k41": "Variable cost per unit ($)", "k42": "Calculer", "k43": "À PROPOS ET CONTACT", "k44": "Fondé sur la recherche, conçu pour être utile.", "k45": "MarkEconly is an early-stage independent project exploring how consumer behaviour and marketing research can help small businesses make clearer decisions.", "k46": "Read existing insights", "contact": "Questions ou suggestions ? Écrivez à", "contactNote": "Research work is subject to scope and availability; no payments are accepted through this site."}, "de": {"k1": "Leistungen", "k2": "Ablauf", "k3": "Artikel", "k4": "Tools", "k5": "Kontakt", "k6": "UNABHÄNGIGES RECHERCHEPROJEKT", "k7": "Bessere Marktentscheidungen beginnen mit klareren Erkenntnissen.", "k8": "Practical consumer and competitor research for independent brands and small businesses. Concise briefs based on public information, with transparent sources and limitations.", "k9": "Rechercheangebot ansehen", "k10": "KLEIN ANFANGEN", "k11": "Eine Frage. Ein nützlicher Bericht.", "k12": "Kompakter Marktrecherchebericht", "k13": "A proposed 5–8 page English PDF answering one clearly scoped business question.", "k14": "Consumer needs and possible buying barriers", "k15": "Comparison of 3–5 competitors using public information", "k16": "Linked evidence, limitations and three practical next steps", "k17": "Desk research only. No invented survey findings, guaranteed sales results, or confidential competitor information.", "k18": "Illustrative pilot price, not yet validated. Subject to agreed scope.", "k19": "UNSER ABLAUF", "k20": "Klarer Ablauf, verlässliche Belege", "k21": "01 · Define", "k22": "Ask a specific question", "k23": "Identify the market, target customer and decision.", "k24": "02 · Research", "k25": "Review public sources", "k26": "Separate supported evidence from interpretation.", "k27": "03 · Apply", "k28": "Receive a focused brief", "k29": "Review insights, limitations and possible next steps.", "k30": "KOSTENLOSE TOOLS", "k31": "Einfache Geschäftsrechner", "k32": "Umsatzrendite einer Kampagne", "k33": "Revenue-based comparison, not profit ROI.", "k34": "Attributed revenue ($)", "k35": "Marketing spend ($)", "k36": "Berechnen", "k37": "Break-even-Menge", "k38": "Assumes constant unit price and costs.", "k39": "Fixed costs ($)", "k40": "Price per unit ($)", "k41": "Variable cost per unit ($)", "k42": "Berechnen", "k43": "ÜBER UNS & KONTAKT", "k44": "Forschungsorientiert und praxisnah.", "k45": "MarkEconly is an early-stage independent project exploring how consumer behaviour and marketing research can help small businesses make clearer decisions.", "k46": "Read existing insights", "contact": "Fragen oder Anregungen? E-Mail an", "contactNote": "Research work is subject to scope and availability; no payments are accepted through this site."}, "es": {"k1": "Servicios", "k2": "Proceso", "k3": "Artículos", "k4": "Herramientas", "k5": "Contacto", "k6": "PROYECTO DE INVESTIGACIÓN INDEPENDIENTE", "k7": "Las mejores decisiones de mercado empiezan con pruebas más claras.", "k8": "Practical consumer and competitor research for independent brands and small businesses. Concise briefs based on public information, with transparent sources and limitations.", "k9": "Explorar el informe", "k10": "EMPEZAR POCO A POCO", "k11": "Una pregunta. Un informe útil.", "k12": "Informe inicial de mercado", "k13": "A proposed 5–8 page English PDF answering one clearly scoped business question.", "k14": "Consumer needs and possible buying barriers", "k15": "Comparison of 3–5 competitors using public information", "k16": "Linked evidence, limitations and three practical next steps", "k17": "Desk research only. No invented survey findings, guaranteed sales results, or confidential competitor information.", "k18": "Illustrative pilot price, not yet validated. Subject to agreed scope.", "k19": "CÓMO FUNCIONA", "k20": "Proceso claro, evidencia fiable", "k21": "01 · Define", "k22": "Ask a specific question", "k23": "Identify the market, target customer and decision.", "k24": "02 · Research", "k25": "Review public sources", "k26": "Separate supported evidence from interpretation.", "k27": "03 · Apply", "k28": "Receive a focused brief", "k29": "Review insights, limitations and possible next steps.", "k30": "HERRAMIENTAS GRATUITAS", "k31": "Calculadoras sencillas", "k32": "Retorno de ingresos de campaña", "k33": "Revenue-based comparison, not profit ROI.", "k34": "Attributed revenue ($)", "k35": "Marketing spend ($)", "k36": "Calcular", "k37": "Unidades de equilibrio", "k38": "Assumes constant unit price and costs.", "k39": "Fixed costs ($)", "k40": "Price per unit ($)", "k41": "Variable cost per unit ($)", "k42": "Calcular", "k43": "SOBRE NOSOTROS Y CONTACTO", "k44": "Investigación práctica y transparente.", "k45": "MarkEconly is an early-stage independent project exploring how consumer behaviour and marketing research can help small businesses make clearer decisions.", "k46": "Read existing insights", "contact": "¿Preguntas o sugerencias? Escribe a", "contactNote": "Research work is subject to scope and availability; no payments are accepted through this site."}, "pt": {"k1": "Serviços", "k2": "Processo", "k3": "Artigos", "k4": "Ferramentas", "k5": "Contato", "k6": "PROJETO DE PESQUISA INDEPENDENTE", "k7": "Melhores decisões de mercado começam com evidências mais claras.", "k8": "Practical consumer and competitor research for independent brands and small businesses. Concise briefs based on public information, with transparent sources and limitations.", "k9": "Conhecer o relatório", "k10": "COMECE PEQUENO", "k11": "Uma pergunta. Um relatório útil.", "k12": "Relatório inicial de mercado", "k13": "A proposed 5–8 page English PDF answering one clearly scoped business question.", "k14": "Consumer needs and possible buying barriers", "k15": "Comparison of 3–5 competitors using public information", "k16": "Linked evidence, limitations and three practical next steps", "k17": "Desk research only. No invented survey findings, guaranteed sales results, or confidential competitor information.", "k18": "Illustrative pilot price, not yet validated. Subject to agreed scope.", "k19": "COMO FUNCIONA", "k20": "Processo claro, evidências confiáveis", "k21": "01 · Define", "k22": "Ask a specific question", "k23": "Identify the market, target customer and decision.", "k24": "02 · Research", "k25": "Review public sources", "k26": "Separate supported evidence from interpretation.", "k27": "03 · Apply", "k28": "Receive a focused brief", "k29": "Review insights, limitations and possible next steps.", "k30": "FERRAMENTAS GRATUITAS", "k31": "Calculadoras simples", "k32": "Retorno de receita da campanha", "k33": "Revenue-based comparison, not profit ROI.", "k34": "Attributed revenue ($)", "k35": "Marketing spend ($)", "k36": "Calcular", "k37": "Ponto de equilíbrio", "k38": "Assumes constant unit price and costs.", "k39": "Fixed costs ($)", "k40": "Price per unit ($)", "k41": "Variable cost per unit ($)", "k42": "Calcular", "k43": "SOBRE E CONTATO", "k44": "Pesquisa com foco prático.", "k45": "MarkEconly is an early-stage independent project exploring how consumer behaviour and marketing research can help small businesses make clearer decisions.", "k46": "Read existing insights", "contact": "Dúvidas ou sugestões? Envie e-mail para", "contactNote": "Research work is subject to scope and availability; no payments are accepted through this site."}, "ja": {"k1": "サービス", "k2": "進め方", "k3": "記事", "k4": "ツール", "k5": "お問い合わせ", "k6": "独立リサーチプロジェクト", "k7": "より良い市場判断は、より明確な根拠から。", "k8": "Practical consumer and competitor research for independent brands and small businesses. Concise briefs based on public information, with transparent sources and limitations.", "k9": "調査レポートを見る", "k10": "小さく始める", "k11": "一つの問いに、一つの役立つレポート。", "k12": "市場調査ミニレポート", "k13": "A proposed 5–8 page English PDF answering one clearly scoped business question.", "k14": "Consumer needs and possible buying barriers", "k15": "Comparison of 3–5 competitors using public information", "k16": "Linked evidence, limitations and three practical next steps", "k17": "Desk research only. No invented survey findings, guaranteed sales results, or confidential competitor information.", "k18": "Illustrative pilot price, not yet validated. Subject to agreed scope.", "k19": "進め方", "k20": "透明な調査プロセス", "k21": "01 · Define", "k22": "Ask a specific question", "k23": "Identify the market, target customer and decision.", "k24": "02 · Research", "k25": "Review public sources", "k26": "Separate supported evidence from interpretation.", "k27": "03 · Apply", "k28": "Receive a focused brief", "k29": "Review insights, limitations and possible next steps.", "k30": "無料ツール", "k31": "シンプルな計算ツール", "k32": "広告売上リターン", "k33": "Revenue-based comparison, not profit ROI.", "k34": "Attributed revenue ($)", "k35": "Marketing spend ($)", "k36": "計算", "k37": "損益分岐点数量", "k38": "Assumes constant unit price and costs.", "k39": "Fixed costs ($)", "k40": "Price per unit ($)", "k41": "Variable cost per unit ($)", "k42": "計算", "k43": "概要・お問い合わせ", "k44": "研究に基づき、実務に役立つ形へ。", "k45": "MarkEconly is an early-stage independent project exploring how consumer behaviour and marketing research can help small businesses make clearer decisions.", "k46": "Read existing insights", "contact": "ご質問・ご意見はこちら：", "contactNote": "Research work is subject to scope and availability; no payments are accepted through this site."}, "ko": {"k1": "서비스", "k2": "진행 과정", "k3": "인사이트", "k4": "도구", "k5": "문의", "k6": "독립 리서치 프로젝트", "k7": "더 나은 시장 의사결정은 더 명확한 근거에서 시작됩니다.", "k8": "Practical consumer and competitor research for independent brands and small businesses. Concise briefs based on public information, with transparent sources and limitations.", "k9": "조사 보고서 보기", "k10": "작게 시작하기", "k11": "질문 하나, 유용한 보고서 하나.", "k12": "기초 시장 조사 보고서", "k13": "A proposed 5–8 page English PDF answering one clearly scoped business question.", "k14": "Consumer needs and possible buying barriers", "k15": "Comparison of 3–5 competitors using public information", "k16": "Linked evidence, limitations and three practical next steps", "k17": "Desk research only. No invented survey findings, guaranteed sales results, or confidential competitor information.", "k18": "Illustrative pilot price, not yet validated. Subject to agreed scope.", "k19": "진행 과정", "k20": "명확한 과정과 신뢰할 수 있는 근거", "k21": "01 · Define", "k22": "Ask a specific question", "k23": "Identify the market, target customer and decision.", "k24": "02 · Research", "k25": "Review public sources", "k26": "Separate supported evidence from interpretation.", "k27": "03 · Apply", "k28": "Receive a focused brief", "k29": "Review insights, limitations and possible next steps.", "k30": "무료 도구", "k31": "간단한 계산기", "k32": "캠페인 매출 수익률", "k33": "Revenue-based comparison, not profit ROI.", "k34": "Attributed revenue ($)", "k35": "Marketing spend ($)", "k36": "계산", "k37": "손익분기 판매량", "k38": "Assumes constant unit price and costs.", "k39": "Fixed costs ($)", "k40": "Price per unit ($)", "k41": "Variable cost per unit ($)", "k42": "계산", "k43": "소개 및 문의", "k44": "연구에 기반한 실용적 접근.", "k45": "MarkEconly is an early-stage independent project exploring how consumer behaviour and marketing research can help small businesses make clearer decisions.", "k46": "Read existing insights", "contact": "질문이나 제안이 있으시면 이메일을 보내주세요:", "contactNote": "Research work is subject to scope and availability; no payments are accepted through this site."}};
+const languageSelect=document.getElementById('language-select');
+function setLanguage(lang){
+ const dict=translations[lang]||translations.en;
+ document.documentElement.lang=lang;
+ document.querySelectorAll('[data-i18n]').forEach(node=>{
+  const value=dict[node.dataset.i18n]??translations.en[node.dataset.i18n];
+  if(value!==undefined) node.textContent=value;
+ });
+ try{localStorage.setItem('markeconly-language',lang);}catch(e){}
 }
-
-langBtn.addEventListener("click", () => {
-  setLanguage(currentLang === "en" ? "zh" : "en");
-});
-
-// ===== Calculators =====
-function calcROI() {
-  const revenue = parseFloat(document.getElementById("roi-revenue").value);
-  const cost = parseFloat(document.getElementById("roi-cost").value);
-  const resultEl = document.getElementById("roi-result");
-
-  if (isNaN(revenue) || isNaN(cost) || cost === 0) {
-    resultEl.textContent = currentLang === "en" ? "Please enter valid numbers" : "请输入有效数字";
-    resultEl.classList.add("show");
-    return;
-  }
-
-  const roi = ((revenue - cost) / cost) * 100;
-  const sign = roi >= 0 ? "+" : "";
-  resultEl.textContent = currentLang === "en"
-    ? `ROI: ${sign}${roi.toFixed(1)}%`
-    : `投资回报率：${sign}${roi.toFixed(1)}%`;
-  resultEl.classList.add("show");
-}
-
-function calcBreakEven() {
-  const fixed = parseFloat(document.getElementById("be-fixed").value);
-  const price = parseFloat(document.getElementById("be-price").value);
-  const variable = parseFloat(document.getElementById("be-variable").value);
-  const resultEl = document.getElementById("be-result");
-
-  if (isNaN(fixed) || isNaN(price) || isNaN(variable) || price <= variable) {
-    resultEl.textContent = currentLang === "en"
-      ? "Please enter valid numbers (price must be higher than variable cost)"
-      : "请输入有效数字（单价需高于单位变动成本）";
-    resultEl.classList.add("show");
-    return;
-  }
-
-  const units = Math.ceil(fixed / (price - variable));
-  resultEl.textContent = currentLang === "en"
-    ? `Break-even: ${units} units`
-    : `盈亏平衡点：${units} 件`;
-  resultEl.classList.add("show");
-}
-
-// ===== Mobile Menu (simple) =====
-const menuBtn = document.getElementById("menu-btn");
-const navLinks = document.querySelector(".nav-links");
-
-menuBtn.addEventListener("click", () => {
-  if (navLinks.style.display === "flex") {
-    navLinks.style.display = "none";
-  } else {
-    navLinks.style.display = "flex";
-    navLinks.style.flexDirection = "column";
-    navLinks.style.position = "absolute";
-    navLinks.style.top = "64px";
-    navLinks.style.left = "0";
-    navLinks.style.right = "0";
-    navLinks.style.background = "#fff";
-    navLinks.style.padding = "20px";
-    navLinks.style.borderBottom = "1px solid #e5e7eb";
-    navLinks.style.gap = "16px";
-  }
-});
+languageSelect.addEventListener('change',()=>setLanguage(languageSelect.value));
+let preferred='en';try{preferred=localStorage.getItem('markeconly-language')||'en';}catch(e){}
+if(!translations[preferred])preferred='en';languageSelect.value=preferred;setLanguage(preferred);

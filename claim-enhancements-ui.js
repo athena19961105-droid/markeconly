@@ -4,7 +4,7 @@ const labels=()=>{const l=document.documentElement.lang||localStorage.getItem('m
 const card=$('evidencePanel');
 if(!card) return;
 function translate(){const t=labels();card.querySelectorAll('[data-claim-i18n]').forEach(el=>el.textContent=t[Number(el.dataset.claimI18n)]);}
-translate();document.addEventListener('change',e=>{if(e.target.matches('select'))setTimeout(translate,30);});new MutationObserver(translate).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
+translate();document.addEventListener('change',e=>{if(e.target.matches('select'))setTimeout(translate,60);});/* Avoid feedback loop with the site-wide translation MutationObserver. */
 let latest=null;
 function settings(){const ranges={};document.querySelectorAll('.rule').forEach(el=>{const ch=el.querySelector('.rule-enable');if(!ch.checked)return;const a=el.querySelector('.min').value.trim(),b=el.querySelector('.max').value.trim();if(!a||!b||!Number.isFinite(Number(a))||!Number.isFinite(Number(b))||Number(a)>Number(b))throw Error('Invalid range for '+ch.dataset.col);ranges[ch.dataset.col]=[Number(a),Number(b)];});return {ranges,idColumn:$('idCol').value};}
 function current(){if(typeof data==='undefined'||!data)throw Error('Upload a CSV file first.');const raw=$('claimed').value.trim();return {column:$('claimCol').value,option:$('claimOption').value,claimedPercent:raw===''?null:Number(raw),recruitment:$('recruitment').value};}

@@ -24,7 +24,7 @@ function render(){const lang=getLang();const tw=lang==='zh-TW';const zh=lang==='
  const dict=tw?dictionaryTW:dictionary;
  document.querySelectorAll('article [data-lang]').forEach(el=>{el.hidden=el.getAttribute('data-lang')!==(zh?'zh':'en');el.style.display=el.hidden?'none':'block';});
  for(const node of textNodes(document.body)){
-  const el=node.parentElement;if(!el||el.closest('script,style,select#language-select,select#site-language-select'))continue;
+  const el=node.parentElement;if(!el||el.closest('script,style,select#language-select,select#site-language-select,[data-claim-i18n]'))continue;
   const articleZh=el.closest('[data-lang="zh"]');if(articleZh){if(!source.has(node))source.set(node,node.nodeValue);const original=source.get(node);const next=tw?convertFallback(original):original;if(node.nodeValue!==next)node.nodeValue=next;continue;}
   if(el.closest('[data-i18n]') && document.getElementById('language-select'))continue;
   if(!source.has(node)){const key=el.dataset&&el.dataset.i18n;const base=key&&window.translations&&window.translations.en&&window.translations.en[key];source.set(node,base||node.nodeValue);}

@@ -117,17 +117,7 @@
     </div>
   </footer>
 
-  <script src="../script.js"></script>
-  <script>
-    // Simple language switch for article content
-    const langBtn = document.getElementById('lang-toggle');
-    let isZh = false;
-    langBtn.addEventListener('click', () => {
-      isZh = !isZh;
-      document.querySelectorAll('[data-lang="en"]').forEach(el => el.style.display = isZh ? 'none' : 'block');
-      document.querySelectorAll('[data-lang="zh"]').forEach(el => el.style.display = isZh ? 'block' : 'none');
-      langBtn.textContent = isZh ? 'EN' : '中文';
-    });
-  </script>
-</body>
+  
+  
+<script src="../i18n-zh.js"></script><script src="../i18n-zh-runtime.js"></script></body>
 </html>

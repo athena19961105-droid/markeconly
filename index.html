@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MarkEconly — Clear Insights on Marketing & Economics</title>
+  <meta name="description" content="Practical marketing strategies, economic insights, and useful business tools. Clear explanations for professionals and learners worldwide." />
+  <meta name="keywords" content="marketing, economics, business insights, ROI calculator, marketing strategy, economic trends" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="header">
+    <div class="container nav">
+      <a href="index.html" class="logo">Mark<span>Econly</span></a>
+      <nav class="nav-links">
+        <a href="#insights" data-i18n="nav.insights">Insights</a>
+        <a href="#tools" data-i18n="nav.tools">Tools</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="nav-right">
+        <button id="lang-toggle" class="lang-btn" aria-label="Switch language">中文</button>
+        <button class="menu-btn" id="menu-btn" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-content">
+      <h1 data-i18n="hero.title">Clear Insights on<br />Marketing & Economics</h1>
+      <p class="hero-subtitle" data-i18n="hero.subtitle">
+        Practical strategies, real-world cases, and useful tools — explained simply for professionals and learners worldwide.
+      </p>
+      <div class="hero-actions">
+        <a href="#insights" class="btn btn-primary" data-i18n="hero.cta1">Explore Insights</a>
+        <a href="#tools" class="btn btn-secondary" data-i18n="hero.cta2">Try Free Tools</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Insights -->
+  <section id="insights" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-i18n="insights.title">Latest Insights</h2>
+        <p data-i18n="insights.desc">Short, actionable articles on marketing strategy and economic trends.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="card-tag">Marketing</div>
+          <h3 data-i18n="card1.title">How to Calculate Real Marketing ROI in 2026</h3>
+          <p data-i18n="card1.desc">Most teams still use outdated metrics. Here’s a simple framework that actually shows profit contribution.</p>
+          <a href="#" class="card-link" data-i18n="card.read">Read more →</a>
+        </article>
+        <article class="card">
+          <div class="card-tag">Economics</div>
+          <h3 data-i18n="card2.title">Why Interest Rates Still Matter for Small Businesses</h3>
+          <p data-i18n="card2.desc">A clear explanation of how monetary policy affects pricing, inventory, and cash flow decisions.</p>
+          <a href="#" class="card-link" data-i18n="card.read">Read more →</a>
+        </article>
+        <article class="card">
+          <div class="card-tag">Strategy</div>
+          <h3 data-i18n="card3.title">Cross-Border Marketing: What Actually Works in 2026</h3>
+          <p data-i18n="card3.desc">Lessons from brands that successfully expanded into new markets without wasting budget.</p>
+          <a href="#" class="card-link" data-i18n="card.read">Read more →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tools -->
+  <section id="tools" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-i18n="tools.title">Free Business Tools</h2>
+        <p data-i18n="tools.desc">Simple calculators to help you make better decisions. No signup required.</p>
+      </div>
+      <div class="tools-grid">
+        <div class="tool-card">
+          <h3 data-i18n="tool1.title">Marketing ROI Calculator</h3>
+          <p data-i18n="tool1.desc">Estimate return on your marketing spend in seconds.</p>
+          <div class="tool-form">
+            <label data-i18n="tool1.revenue">Revenue from campaign ($)</label>
+            <input type="number" id="roi-revenue" placeholder="5000" />
+            <label data-i18n="tool1.cost">Marketing cost ($)</label>
+            <input type="number" id="roi-cost" placeholder="1200" />
+            <button class="btn btn-primary" onclick="calcROI()" data-i18n="tool1.btn">Calculate ROI</button>
+            <div id="roi-result" class="tool-result"></div>
+          </div>
+        </div>
+        <div class="tool-card">
+          <h3 data-i18n="tool2.title">Break-even Calculator</h3>
+          <p data-i18n="tool2.desc">Find out how many units you need to sell to cover costs.</p>
+          <div class="tool-form">
+            <label data-i18n="tool2.fixed">Fixed costs ($)</label>
+            <input type="number" id="be-fixed" placeholder="3000" />
+            <label data-i18n="tool2.price">Price per unit ($)</label>
+            <input type="number" id="be-price" placeholder="49" />
+            <label data-i18n="tool2.variable">Variable cost per unit ($)</label>
+            <input type="number" id="be-variable" placeholder="18" />
+            <button class="btn btn-primary" onclick="calcBreakEven()" data-i18n="tool2.btn">Calculate</button>
+            <div id="be-result" class="tool-result"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container about-grid">
+      <div>
+        <h2 data-i18n="about.title">About MarkEconly</h2>
+        <p data-i18n="about.p1">
+          MarkEconly was created to bridge the gap between academic knowledge and real-world business decisions. We focus on clear, practical explanations of marketing strategies and economic concepts.
+        </p>
+        <p data-i18n="about.p2">
+          Whether you are a marketer, entrepreneur, student, or simply curious about how markets work, our goal is to make complex ideas easy to understand and apply.
+        </p>
+      </div>
+      <div class="about-stats">
+        <div class="stat">
+          <span class="stat-num">EN + 中文</span>
+          <span class="stat-label" data-i18n="about.stat1">Bilingual Content</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">Free</span>
+          <span class="stat-label" data-i18n="about.stat2">Tools & Articles</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">Practical</span>
+          <span class="stat-label" data-i18n="about.stat3">Real-world Focus</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ad Placeholder -->
+  <div class="ad-placeholder container">
+    <span data-i18n="ad.label">Advertisement</span>
+  </div>
+
+  <!-- Contact / Footer -->
+  <footer id="contact" class="footer">
+    <div class="container footer-content">
+      <div>
+        <div class="logo footer-logo">Mark<span>Econly</span></div>
+        <p data-i18n="footer.desc">Clear insights on marketing and economics for a global audience.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#insights" data-i18n="nav.insights">Insights</a>
+        <a href="#tools" data-i18n="nav.tools">Tools</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+      </div>
+      <div class="footer-contact">
+        <p data-i18n="footer.contact">Questions or suggestions?</p>
+        <a href="mailto:hello@markeconly.com">hello@markeconly.com</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 MarkEconly. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

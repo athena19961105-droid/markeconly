@@ -11,6 +11,15 @@ es:['Inicio','Servicios','Portafolio','Informe de muestra','Artículos','Herrami
 pt:['Início','Serviços','Portfólio','Relatório de exemplo','Artigos','Ferramentas','Contato','Sobre','← Voltar aos artigos'],
 ja:['ホーム','サービス','研究実績','レポート例','記事','ツール','お問い合わせ','概要','← 記事一覧に戻る'],
 ko:['홈','서비스','연구 실적','보고서 예시','인사이트','도구','문의','소개','← 글 목록으로']};
+const notices={
+zh:'提示：此页面尚有未翻译的内容，英文部分为原始内容。',
+'zh-TW':'提示：此頁面仍有尚未翻譯的內容，英文部分為原始內容。',
+fr:'Traduction incomplète : certains contenus restent en anglais.',
+de:'Übersetzung unvollständig: Einige Inhalte sind weiterhin auf Englisch.',
+es:'Traducción incompleta: parte del contenido sigue en inglés.',
+pt:'Tradução incompleta: parte do conteúdo continua em inglês.',
+ja:'翻訳は未完了です。一部の内容は英語で表示されます。',
+ko:'번역이 완료되지 않았습니다. 일부 콘텐츠는 영어로 표시됩니다.'};
 const paths=['index.html','services.html','portfolio.html','sample-report.html','articles.html','#tools','contact.html','#about'];
 const root=document.currentScript&&document.currentScript.getAttribute('data-root')||'';
 const norm=(v)=>languages[v]?v:(v==='zh-CN'?'zh':'en');
@@ -24,7 +33,7 @@ function update(){document.documentElement.lang=lang;select.value=lang;
  // Legacy bilingual article bodies: retain Chinese when selected; otherwise show original English
  if(document.querySelector('article [data-lang="en"]')){document.querySelectorAll('article [data-lang]').forEach(e=>{let l=e.getAttribute('data-lang');e.hidden=!(l===lang || (lang!=='zh' && lang!=='en' && l==='en'));});}
  let notice=document.getElementById('translation-coverage-notice');if(!notice){notice=document.createElement('p');notice.id='translation-coverage-notice';notice.style.cssText='background:#fff4d7;color:#553b00;padding:10px 18px;font-size:14px;margin:0;text-align:center';document.body.insertBefore(notice,document.body.firstChild.nextSibling)}
- const full=lang==='en';notice.hidden=full;notice.textContent=lang==='zh'?'提示：本页面部分正文尚未完成翻译；显示的英文为原始内容。':'Translation of this page is incomplete. Some original English content is shown.';
+ const full=lang==='en';notice.hidden=full;notice.textContent=notices[lang]||'';
 }
 select.addEventListener('change',()=>{lang=norm(select.value);localStorage.setItem('markeconly-lang',lang);localStorage.setItem('markeconly-language',lang==='zh'?'zh-CN':lang);update();});
 function init(){const host=document.querySelector('.nav-right')||document.querySelector('header nav')||document.querySelector('header');if(host){host.appendChild(select);}const legacy=document.getElementById('lang-toggle');if(legacy)legacy.hidden=true;update();}

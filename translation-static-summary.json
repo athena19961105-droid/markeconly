@@ -1,0 +1,19 @@
+{
+  "html_pages": 11,
+  "candidate_text_nodes": 559,
+  "without_explicit_translation_key": 439,
+  "by_page": {
+    "articles.html": 29,
+    "articles/cross-border.html": 30,
+    "articles/interest-rates.html": 34,
+    "articles/roi-2026.html": 43,
+    "claim-checker.html": 50,
+    "contact.html": 29,
+    "index.html": 71,
+    "portfolio.html": 34,
+    "research-check.html": 163,
+    "sample-report.html": 44,
+    "services.html": 32
+  },
+  "note": "Heuristic inventory. It can flag text that is translated by legacy JS and can miss dynamic JS output. Not a translation completion score."
+}

@@ -5,8 +5,8 @@ const dictionaryTW=window.MARKECONLY_ZH_TW||{};
 const source=new WeakMap();
 const NAV={'Home':'首页','Services':'服务','Portfolio':'研究作品','Sample Report':'示例报告','Insights':'洞察文章','Tools':'工具','Contact':'联系','About':'关于'};
 const langKey='markeconly-language';
-function getLang(){try{return localStorage.getItem(langKey)||'en'}catch(e){return 'en'}}
-function saveLang(v){try{localStorage.setItem(langKey,v)}catch(e){}}
+function getLang(){try{const v=localStorage.getItem(langKey)||localStorage.getItem('markeconly-lang')||'en';return v==='zh'?'zh-CN':v}catch(e){return 'en'}}
+function saveLang(v){try{localStorage.setItem(langKey,v);localStorage.setItem('markeconly-lang',v==='zh-CN'?'zh':v)}catch(e){}}
 function translate(raw){const v=raw.trim();if(!v)return raw;let result=dictionary[v];
  if(!result){let m=v.match(/^Among (\d+) respondents who answered "(.*?)", (\d+) \(([\d.]+)%\) selected "(.*?)"\.$/);if(m)result=`在回答“${m[2]}”的 ${m[1]} 位受访者中，有 ${m[3]} 位（${m[4]}%）选择了“${m[5]}”。`;}
  if(!result){let m=v.match(/^(\d+) blank responses were excluded from this question denominator\.$/);if(m)result=`该题有 ${m[1]} 个空白回答未计入分母。`;}
@@ -35,7 +35,7 @@ function translate(raw){const v=raw.trim();if(!v)return raw;let result=dictionar
 }
 function convertFallback(s){const article=window.MARKECONLY_ARTICLE_TW||{};const v=s.trim();return article[v]===undefined?s:s.replace(v,article[v]);}
 function textNodes(root){const walk=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);const list=[];while(walk.nextNode())list.push(walk.currentNode);return list;}
-function render(){const lang=getLang();const tw=lang==='zh-TW';const zh=lang==='zh-CN'||tw;document.documentElement.lang=lang;
+function render(){const lang=getLang();const tw=lang==='zh-TW';const zh=lang==='zh-CN'||lang==='zh'||tw;document.documentElement.lang=lang;
  const dict=tw?dictionaryTW:dictionary;
  document.querySelectorAll('article [data-lang]').forEach(el=>{el.hidden=el.getAttribute('data-lang')!==(zh?'zh':'en');el.style.display=el.hidden?'none':'block';});
  for(const node of textNodes(document.body)){

@@ -16,5 +16,4 @@ function setLanguage(lang){
  try{localStorage.setItem('markeconly-language',lang);}catch(e){}
 }
 languageSelect.addEventListener('change',()=>setLanguage(languageSelect.value));
-let preferred='en';try{preferred=localStorage.getItem('markeconly-language')||'en';}catch(e){}
-if(!translations[preferred])preferred='en';languageSelect.value=preferred;setLanguage(preferred);
+const preferred='en'; if(languageSelect) {languageSelect.value='en';setLanguage('en');}

@@ -1,14 +1,14 @@
 (function(root,factory){const api=factory();if(typeof module==='object'&&module.exports)module.exports=api;root.ResearchCheck=api;})(typeof globalThis!=='undefined'?globalThis:this,function(){
 'use strict';
 function parseCSV(input){
- const s=String(input).replace(/^\uFEFF/,'');const rows=[];let row=[],field='',state='start';
- function pushRow(){row.push(field);if(row.some(x=>x!==''))rows.push(row);row=[];field='';state='start';}
+ const s=String(input).replace(/^\uFEFF/,'');const rows=[],rowNumbers=[];let row=[],field='',state='start',line=1,rowStart=1;
+ function pushRow(){row.push(field);if(row.length>1||row.some(x=>x!=='')){rows.push(row);rowNumbers.push(rowStart);}row=[];field='';state='start';}
  for(let i=0;i<s.length;i++){
   const c=s[i];
-  if(state==='quoted'){if(c==='"'&&s[i+1]==='"'){field+='"';i++;}else if(c==='"')state='afterQuote';else field+=c;continue;}
+  if(state==='quoted'){if(c==='"'&&s[i+1]==='"'){field+='"';i++;}else if(c==='"')state='afterQuote';else {field+=c;if(c==='\n'||(c==='\r'&&s[i+1]!=='\n'))line++;}continue;}
   if(c===','||c==='\n'||c==='\r'){
    if(c===','){row.push(field);field='';state='start';}
-   else{if(c==='\r'&&s[i+1]==='\n')i++;pushRow();}continue;
+   else{if(c==='\r'&&s[i+1]==='\n')i++;pushRow();line++;rowStart=line;}continue;
   }
   if(state==='afterQuote')throw Error('Unexpected character after closing quote at character '+i);
   if(c==='"'){if(state!=='start')throw Error('Unexpected quote at character '+i);state='quoted';continue;}
@@ -17,26 +17,26 @@ function parseCSV(input){
  if(state==='quoted')throw Error('Unclosed quoted CSV field');
  if(field!==''||row.length)pushRow();
  if(rows.length<2)throw Error('CSV needs a header and at least one data row');
- const headers=rows.shift().map(x=>x.trim());
+ const headers=rows.shift().map(x=>x.trim());rowNumbers.shift();
  if(headers.some(x=>!x)||new Set(headers).size!==headers.length)throw Error('Headers must be nonempty and unique');
- for(let i=0;i<rows.length;i++)if(rows[i].length!==headers.length)throw Error('Row '+(i+2)+' has '+rows[i].length+' fields; expected '+headers.length);
- return {headers,rows};
+ for(let i=0;i<rows.length;i++)if(rows[i].length!==headers.length)throw Error('Row '+rowNumbers[i]+' has '+rows[i].length+' fields; expected '+headers.length);
+ return {headers,rows,rowNumbers};
 }
 function check(data,config={}){
  const {headers,rows}=data,ranges=config.ranges||{},idColumn=config.idColumn||'';
  const missing=Object.fromEntries(headers.map((h,j)=>[h,rows.reduce((n,r)=>n+(r[j].trim()===''?1:0),0)]));
- const invalidRanges={},flagged=[];
+ const invalidRanges=Object.create(null),flagged=[];
  for(const [h,b] of Object.entries(ranges)){
   const j=headers.indexOf(h);if(j<0)continue;
   if(!Array.isArray(b)||b.length!==2||!b.every(x=>typeof x==='number'&&Number.isFinite(x))||b[0]>b[1])throw Error('Invalid numeric range for '+h);
-  let n=0;rows.forEach((r,i)=>{const v=r[j].trim();if(v==='')return;const x=Number(v);if(!Number.isFinite(x)||x<b[0]||x>b[1]||!/^[-+]?(?:\d+(?:\.\d*)?|\.\d+)$/.test(v)){n++;flagged.push({csv_row:i+2,column:h,value:v,issue:'out_of_range_or_non_numeric'});}});invalidRanges[h]=n;
+  let n=0;rows.forEach((r,i)=>{const v=r[j].trim();if(v==='')return;const x=Number(v);if(!Number.isFinite(x)||x<b[0]||x>b[1]||!/^[-+]?(?:\d+(?:\.\d*)?|\.\d+)$/.test(v)){n++;flagged.push({csv_row:data.rowNumbers?.[i]??i+2,column:h,value:v,issue:'out_of_range_or_non_numeric'});}});invalidRanges[h]=n;
  }
- const seen=new Set();let duplicateRows=0;rows.forEach((r,i)=>{const key=JSON.stringify(r);if(seen.has(key)){duplicateRows++;flagged.push({csv_row:i+2,column:'(all)',value:'',issue:'exact_duplicate_row'});}else seen.add(key);});
- let duplicateIds=null;if(idColumn&&headers.includes(idColumn)){const seenIds=new Set();duplicateIds=0;const j=headers.indexOf(idColumn);rows.forEach((r,i)=>{const id=r[j].trim();if(!id)return;if(seenIds.has(id)){duplicateIds++;flagged.push({csv_row:i+2,column:idColumn,value:id,issue:'duplicate_id'});}else seenIds.add(id);});}
+ const seen=new Set();let duplicateRows=0;rows.forEach((r,i)=>{const key=JSON.stringify(r);if(seen.has(key)){duplicateRows++;flagged.push({csv_row:data.rowNumbers?.[i]??i+2,column:'(all)',value:'',issue:'exact_duplicate_row'});}else seen.add(key);});
+ let duplicateIds=null;if(idColumn&&headers.includes(idColumn)){const seenIds=new Set();duplicateIds=0;const j=headers.indexOf(idColumn);rows.forEach((r,i)=>{const id=r[j].trim();if(!id)return;if(seenIds.has(id)){duplicateIds++;flagged.push({csv_row:data.rowNumbers?.[i]??i+2,column:idColumn,value:id,issue:'duplicate_id'});}else seenIds.add(id);});}
  return {rows:rows.length,columns:headers.length,missing,invalidRanges,exactDuplicateRows:duplicateRows,duplicateIds,flagged,disclaimer:'Flags require human review; no records were deleted. A passing check does not establish validity or representativeness.'};
 }
 function checkClaim(data,config={}){
- const {headers,rows}=data;const column=config.column,option=String(config.option??'');
+ const {headers,rows}=data;const column=config.column,option=String(config.option??'').trim();
  if(!headers.includes(column))throw Error('Choose an existing question column');
  if(!option.trim())throw Error('Choose a response option');
  const j=headers.indexOf(column),valid=rows.map(r=>r[j].trim()).filter(v=>v!=='');

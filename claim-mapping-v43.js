@@ -10,7 +10,7 @@ function audit(input){
  if(!q)push('question_text','needs_input','Provide the exact survey question wording.');else push('question_text','documented','Survey question wording supplied by user; not independently verified.');
  if(!s)push('claim_text','needs_input','Provide the exact proposed public statement.');
  if(!column)push('data_column','needs_input','Select the CSV column associated with this question.');
- if(measured==='unknown'||asserted==='unknown')push('construct','needs_review','One or both constructs are unknown; semantic equivalence cannot be established.');
+ if(!Object.hasOwn(names,measured)||!Object.hasOwn(names,asserted)||measured==='unknown'||asserted==='unknown')push('construct','needs_review','One or both constructs are unknown; semantic equivalence cannot be established.');
  else if(measured==='other'||asserted==='other')push('construct','needs_review','Other construct requires manual review.');
  else if(measured!==asserted)push('construct','mismatch',`Declared survey measure (${names[measured]||measured}) differs from claim (${names[asserted]||asserted}).`);
  else push('construct','declared_match','User-declared constructs agree; question wording has NOT been independently checked.');

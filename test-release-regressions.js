@@ -1,0 +1,32 @@
+'use strict';
+const assert=require('node:assert/strict');
+const check=require('./checker.js');
+const claims=require('./claim-enhancements.js');
+const likert=require('./likert-v42.js');
+const reverse=require('./reverse-coding-v45.js');
+require('./multiple-response-v44.js');
+const multi=globalThis.MarkEconlyMultipleResponse;
+// Missing records remain in all-row denominators; empty physical lines do not invent respondents.
+const missing=check.parseCSV('id,answer,score\n1,Yes,5\n,,\n\n2,No,2\n');
+assert.equal(missing.rows.length,3);assert.deepEqual(missing.rowNumbers,[2,3,5]);
+assert.equal(check.checkClaim(missing,{column:'answer',option:' Yes '}).denominator,2);
+const scenario=claims.evaluate(missing,{column:'answer',option:'Yes',ranges:{score:[1,5]},excludeInvalid:true});
+assert.equal(scenario.excludedRows,1);assert.equal(scenario.excludedDetails[0].csvRow,3);
+// A multiline quoted field and skipped physical line must not shift reported source positions.
+const physical=check.parseCSV('id,answer,score\n1,"Yes\nindeed",5\n\n2,Yes,bad\n2,Yes,bad\n');
+assert.deepEqual(physical.rowNumbers,[2,5,6]);
+const flags=check.check(physical,{ranges:{score:[1,5]},idColumn:'id'}).flagged;
+assert.deepEqual(flags.filter(x=>x.issue==='out_of_range_or_non_numeric').map(x=>x.csv_row),[5,6]);
+assert.equal(flags.find(x=>x.issue==='duplicate_id').csv_row,6);
+assert.throws(()=>claims.evaluate(missing,{column:'answer',option:'Yes',ranges:{score:[5,1]}}),/Invalid numeric range/);
+assert.throws(()=>claims.evaluate(missing,{column:'answer',option:'Yes',ranges:{ghost:[1,5]}}),/Unknown range column/);
+assert.throws(()=>claims.evaluate(missing,{column:'answer',option:'Yes',excludeIds:true}),/ID column/);
+const odd=check.parseCSV('score\n0x4\n0b100\n4\n5\n');
+assert.equal(likert.calculate(odd,{column:'score',min:1,max:5,threshold:4}).invalid,2);
+assert.equal(reverse.audit(odd,{column:'score',min:1,max:5}).invalid,2);
+const allMissing=check.parseCSV('a,b\n,\n,\n');
+const mr=multi.audit(allMissing,{columns:['a','b']});assert.equal(mr.uploadedRows,2);assert.equal(mr.respondentDenominator,0);assert.equal(mr.options[0].percentOfRespondents,null);
+const unusual=check.parseCSV('__proto__,answer\n9,Yes\n');
+const ranges=Object.fromEntries([['__proto__',[1,5]]]);
+assert.equal(check.check(unusual,{ranges}).invalidRanges.__proto__,1);
+console.log('PASS release regressions: missing records, physical source lines, exclusion validation, strict scale codes, zero denominators, special headers');

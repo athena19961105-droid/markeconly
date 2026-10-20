@@ -8,9 +8,9 @@ function audit(parsed,config){
  parsed.rows.forEach((row,ri)=>{
   const values=indexes.map(i=>String(row[i]??'').trim());
   const invalid=values.some(v=>v!==''&&v!=='0'&&v!=='1');
-  if(invalid){invalidRows.push(ri+2);return;}
+  if(invalid){invalidRows.push(parsed.rowNumbers?.[ri]??ri+2);return;}
   if(values.every(v=>v==='')){allMissing++;return;}
-  if(values.some(v=>v==='')){partialRows.push(ri+2);return;}
+  if(values.some(v=>v==='')){partialRows.push(parsed.rowNumbers?.[ri]??ri+2);return;}
   respondentsWithValidAnswers++;
   let selected=0;values.forEach((v,i)=>{if(v==='1'){counts[i]++;selected++;selectionCount++;}});
   if(selected)respondentsWithSelection++;
